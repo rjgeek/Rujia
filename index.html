@@ -23,441 +23,10 @@ var _hmt = _hmt || [];
 <meta name="author" content="Dr. Rujia Li">
 <meta name="robots" content="index, follow">
 
-   <title>Rujia Li - Overview</title>
-
-    <!-- Google Fonts -->
-    <link href="font-style.css" rel="stylesheet">
-   
-   <style>
-  /* 默认隐藏所有 section */
-        .section {
-            display: none;
-        }
-
-        /* 默认显示 Home 页面 */
-        #home-section {
-            display: block;
-        }
-
-        /* 通用重置 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            font-family: 'Roboto', sans-serif;
-            background: #ffffff;
-            color: #333333;
-            font-size: 16px;
-            line-height: 1.6;
-            overflow-y: scroll;
-        }
-
-        /* 主布局 */
-        .container {
-            display: flex;
-            flex-direction: row;
-            min-height: 100vh;
-        }
-
-        /* 左侧导航栏 */
-        .navigation {
-            width: 250px;
-            min-height: 100vh;
-            background: #000;
-            padding: 20px;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-
-        .navigation img {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .navigation a {
-            color: #ffffff;
-            font-weight: 600;
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 10px 0;
-            display: block;
-            width: 100%;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            cursor: pointer;
-        }
-        /* 选中状态 */
-	.navigation a.active {
-	    background: #1a1a1a;
-	    font-weight: bold;
-	    border-left: 4px solid #007bff;
-	    padding-left: 12px; /* 让选中效果更明显 */
-	    color: #007bff;
-	}
-        .navigation a:hover {
-            background: #333333;
-        }
-
-        /* 选中状态 */
-        .navigation a.active {
-            background: #1a1a1a;
-            font-weight: bold;
-            border-left: 4px solid #007bff;
-            padding-left: 12px;
-            color: #007bff;
-        }
-       
-	/* 鼠标悬停 */
-	.navigation a:hover {
-	    background: #0056b3;
-	}
-
-        /* 右侧内容区域 */
-        .main {
-            flex: 1;
-            padding: 50px;
-            margin-left: 250px;
-            max-width: 900px;
-            overflow-y: auto;
-        }
-        
-        /* 标题样式 */
-	.header-title {
-	    text-align: center;
-	    font-size: 32px;
-	    font-weight: 800;
-	    text-transform: uppercase;
-	    color: #333333;
-	    margin-bottom: 30px;
-	}
-        /* 章节标题 */
-        .section-title {
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 30px;
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            display: inline-block;
-            border-bottom: 2px solid #007bff;
-        }
-        
-          /* 主类别样式 */
-	.research-topics ul {
-	    list-style: none;
-	    padding-left: 0;
-	}
-
-	.research-topics li {
-	    font-size: 1.1rem;
-	    font-weight: 500;
-	    margin-bottom: 8px;
-	    position: relative;
-	    /* padding-left: 20px;*/
-	}
-
-	.research-topics li::before {
-	    content: "•";
-	    position: absolute;
-	    left: 0;
-	    color: #0066cc;
-	    font-size: 1.2rem;
-	    font-weight: bold;
-	}
-
-	/* 子类别样式 */
-	.sub-category {
-	    margin-top: 5px;
-	    padding-left: 30px; /* 增加缩进 */
-	}
-
-	.sub-category li {
-	    font-size: 1rem;
-	    font-weight: normal;
-	    padding-left: 18px;
-	    position: relative;
-	}
-
-	.sub-category li::before {
-	    content: "›"; /* 子类别使用箭头 */
-	    position: absolute;
-	    left: 0;
-	    color: #0080ff; /* 子类别颜色稍浅 */
-	    font-size: 1.1rem;
-	    font-weight: bold;
-	}
-	
-	/* "More News" 样式 */
-	.more-link {
-	    text-align: left;
-	    margin-top: 10px;
-	}
-
-	.more-link a {
-	    text-decoration: underline;
-	}
-
-	/* 页脚 */
-	.footer {
-	    text-align: center;
-	    margin-top: 50px;
-	    font-size: 14px;
-	    color: #666666;
-	}
-	
-	.footnote {
-        text-align: right;
-        font-size: 0.8em;
-        color: #666;
-        margin-top: -30px;
-      }
-
-	/* 分隔线 */
-	hr {
-	    margin: 40px 0;
-	    border: 0;
-	    border-top: 1px solid #dddddd;
-	}
-
-	/* 列表样式 */
-	ul, ol {
-	    padding-left: 20px;
-	    margin-top: 10px;
-	}
-
-	li {
-	    margin-bottom: 10px;
-	}
-
-	/* 新闻、论文、内容列表 */
-	.content, .publication-list {
-	    list-style: none;
-	    padding-left: 0;
-	}
-
-	.content li, .publication-list li {
-	    margin-bottom: 10px;
-	}
-	
-	/* Hero Section */
-	.hero {
-	    text-align: center;
-	    padding: 50px 20px;
-	    background: #f5f5f5;
-	}
-
-	.hero p {
-	  
-	    margin-top: 10px;
-	}
-
-	.research-box {
-	    background: #ffffff;
-	    border: 2px solid #007bff; /* 添加蓝色边框 */
-	    border-radius: 8px; /* 让方框圆角 */
-	    padding: 20px;
-	    margin-bottom: 20px;
-	    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 增加阴影 */
-	}
-
-	.research-box h3 {
-	    font-size: 1.5rem;
-	    color: #007bff;
-	    margin-bottom: 10px;
-	    border-bottom: 2px solid #007bff;
-	    padding-bottom: 5px;
-	    display: inline-block;
-	}
-
-	.research-box p {
-	    font-size: 1rem;
-	    margin-top: 10px;
-	    color: #333;
-	}
-	
-	
-
-	/* 响应式布局，适配小屏幕 */
-	@media screen and (max-width: 768px) {
-	    .research-box {
-	        padding: 15px;
-	        margin-bottom: 15px;
-	    }
-	}
-
-	/* Timeline */
-	.timeline {
-	    list-style: none;
-	    margin: 20px 0;
-	    padding-left: 10px;
-	}
-
-	.timeline li {
-	    position: relative;
-	    padding-left: 20px;
-	    margin-bottom: 10px;
-	}
-
-	.timeline .year {
-	    font-weight: bold;
-	    color: #007bff;
-	}
-
-	.timeline .title {
-	    font-weight: 600;
-	}
-	
-	.industry-applications {
-	    margin-top: 40px;
-	   
-	}
-
-	.logo-grid {
-	     display: grid;
-	    grid-template-columns: repeat(3, 1fr); /* 每行 4 列 */
-	    gap: 20px; /* 控制 Logo 之间的间距 */
-	    justify-items: center;
-	    align-items: center;
-	    margin-top: 20px;
-	     text-align: center;
-	}
-
-	.logo-grid img {
-	    max-height: 60px; /* 统一高度，防止大小完全一致 */
-	    width: auto;
-	    max-width: 300px; /* 限制最大宽度，保证不会变形 */
-	    object-fit: contain;
-	    padding: 5px;
-	    background: #fff;
-	    border-radius: 8px; /* 圆角 */
-	    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	     text-align: center;
-	}
-
-
-        /* 响应式设计 */
-        @media screen and (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .navigation {
-                width: 100%;
-                height: auto;
-                position: relative;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-            }
-
-            .main {
-                margin-left: 0;
-                padding: 30px;
-                max-width: 100%;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .navigation {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .main {
-                padding: 20px;
-            }
-        }  
-	
-	.pps-gif-section {
-	    text-align: center;
-	    margin-top: 30px;
-	}
-
-	.gif-container {
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
-	    max-width: 600px; /* 控制最大宽度 */
-	    margin: 0 auto;
-	    border-radius: 8px; /* 圆角 */
-	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
-	    overflow: hidden;
-	}
-
-	.gif-container img {
-	    width: 55%;
-	    height: auto;
-	    display: block;
-	    border-radius: 8px;
-	}
-	
-  .philosophy-container {
-        display: flex;
-        justify-content: space-between; /* 让两列均匀排列 */
-        gap: 40px; /* 控制两列之间的间距 */
-        align-items: flex-start;
-        margin-top: 20px;
-    }
-
-    .philosophy-box {
-        flex: 1; /* 让两个部分宽度均等 */
-        background: #f5f5f5;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        min-width: 300px; /* 设定最小宽度，防止过窄 */
-    }
-
-    .philosophy-box h2 {
-        text-align: center;
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-
-    .philosophy-box ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .philosophy-box li {
-        font-size: 16px;
-        margin-bottom: 8px;
-        padding-left: 18px;
-        position: relative;
-    }
-
-    .philosophy-box li::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: #007bff;
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
-
-    /* 在小屏幕（宽度小于 768px）时改为竖向排列，并且让宽度一致 */
-    @media screen and (max-width: 768px) {
-        .philosophy-container {
-            flex-direction: column;
-            gap: 20px; /* 调整间距 */
-            align-items: center; /* 居中对齐 */
-        }
-
-        .philosophy-box {
-            width: 100%; /* 让两个框的宽度相同 */
-            max-width: 500px; /* 限制最大宽度，防止过宽 */
-        }
-    }
-    
-   
-    </style>
+<title>Rujia Li - Overview</title>
+<!-- Google Fonts -->
+<link href="font-style.css" rel="stylesheet">
+ <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -492,7 +61,7 @@ var _hmt = _hmt || [];
             <h2 id="research" class="section-title">Research Interests</h2>
             <div class="research-topics">
              My research focuses on <b><a href="#research-section">Privacy-Preserving Smart Contracts (PPSCs)</a></b>, with a particular emphasis on 
-             improving the security of consensus algorithms and privacy-preserving technologies that underpin the design and implementation of PPSCs.
+             improving the (economic-level and system-level) security of consensus algorithms and privacy-preserving technologies that underpin the design and implementation of PPSCs.
              <ul class="sub-category">
                 <li>Hybrid consensus algorithm (POW<sup><a href="#footnote">[1]</a></sup> + BFT<sup><a href="#footnote">[2]</a></sup>) </li>
                 <li>Hybrid privacy-preserving technology (TEE<sup><a href="#footnote">[3]</a></sup> + cryptography)</li>
@@ -539,13 +108,8 @@ var _hmt = _hmt || [];
 	         <p>Privacy-Preserving Smart Contracts  (PPSCs) are designed to keep the data and transactions confidential while 
 	         ensuring the secure execution of transactions on the blockchain.   
 	         As shown in the diagram below, PPSCs are built on two main components: a consensus algorithm and privacy-preserving technology.</p>
-
-	     <!-- PPSCs Introduction GIF -->
-		<div class="pps-gif-section">
-		    <div class="gif-container">
-		        <img src="image/industry/ppsc1.gif" alt="PPSCs Introduction">
-		    </div>
-		</div>
+		<!-- PPSCs Introduction GIF (Initially hidden) -->
+	        <div class="pps-gif-section" id="pps-gif-section"></div>
 	     </section>
 
            <section class="research-topics">
@@ -894,41 +458,61 @@ var _hmt = _hmt || [];
 </div>
 
 <script>
-       function showSection(sectionId) {
-	    // 隐藏所有 section
+     function showSection(sectionId) {
+	    // Hide all sections
 	    document.querySelectorAll('.section').forEach(section => {
 	        section.style.display = 'none';
 	    });
 
-	    // 显示选中的 section
-	    document.getElementById(sectionId).style.display = 'block';
+	    // Show the selected section
+	    const section = document.getElementById(sectionId);
+	    section.style.display = 'block';
 
-	    // 更新导航栏的选中状态
+	    // If the Research section is selected, load the GIF dynamically
+	    if (sectionId === 'research-section') {
+	        loadResearchGif();
+	    }
+
+	    // Update the active state in the navigation
 	    document.querySelectorAll('.navigation a').forEach(link => {
 	        link.classList.remove('active');
 	    });
 	    event.target.classList.add('active');
 	}
 	
+	function loadResearchGif() {
+	    const gifContainer = document.getElementById('pps-gif-section');
+	   
+	    if (!gifContainer.querySelector("img")) {
+            var htmlContent = `
+                <div class="gif-container">
+                    <img src="image/industry/ppsc1.gif" alt="PPSCs Introduction">
+                </div>
+            `; 
+            gifContainer.innerHTML = htmlContent;  // Append the HTML content to the container
+        }
+	}
+
 	document.addEventListener("DOMContentLoaded", function() {
-       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Add event listeners for anchor links with href starting with '#'
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault(); // 阻止默认的跳转行为
+            e.preventDefault(); // Prevent default anchor behavior
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                // 先隐藏所有 section，再显示目标 section
+                // Hide all sections and show the target section
                 document.querySelectorAll('.section').forEach(section => {
                     section.style.display = 'none';
                 });
                 target.style.display = 'block';
 
-                // 平滑滚动到目标 section
+                // Smooth scroll to the target section
                 window.scrollTo({
-                    top: target.offsetTop - 20,  // 适当调整偏移量，避免导航栏遮挡
+                    top: target.offsetTop - 20,  // Adjust for navigation bar offset
                     behavior: 'smooth'
                 });
 
-                // 更新导航栏选中状态
+                // Update the active state in the navigation
                 document.querySelectorAll('.navigation a').forEach(link => {
                     link.classList.remove('active');
                 });

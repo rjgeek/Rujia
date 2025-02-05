@@ -1,0 +1,404 @@
+ 
+   <style>
+        .section {
+            display: none;
+        }
+
+        #home-section {
+            display: block;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: 'Roboto', sans-serif;
+            background: #ffffff;
+            color: #333333;
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-y: scroll;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+        }
+
+        .navigation {
+            width: 250px;
+            min-height: 100vh;
+            background: #000;
+            padding: 20px;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navigation img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .navigation a {
+            color: #ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px 0;
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+        }
+  
+	.navigation a.active {
+	    background: #1a1a1a;
+	    font-weight: bold;
+	    border-left: 4px solid #007bff;
+	    padding-left: 12px;
+	    color: #007bff;
+	}
+        .navigation a:hover {
+            background: #333333;
+        }
+
+        .navigation a.active {
+            background: #1a1a1a;
+            font-weight: bold;
+            border-left: 4px solid #007bff;
+            padding-left: 12px;
+            color: #007bff;
+        }
+       
+	.navigation a:hover {
+	    background: #0056b3;
+	}
+
+        .main {
+            flex: 1;
+            padding: 50px;
+            margin-left: 250px;
+            max-width: 900px;
+            overflow-y: auto;
+        }
+        
+	.header-title {
+	    text-align: center;
+	    font-size: 32px;
+	    font-weight: 800;
+	    text-transform: uppercase;
+	    color: #333333;
+	    margin-bottom: 30px;
+	}
+	
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            display: inline-block;
+            border-bottom: 2px solid #007bff;
+        }
+        
+	.research-topics ul {
+	    list-style: none;
+	    padding-left: 0;
+	}
+
+	.research-topics li {
+	    font-size: 1.1rem;
+	    font-weight: 500;
+	    margin-bottom: 8px;
+	    position: relative;
+	}
+
+	.research-topics li::before {
+	    content: "•";
+	    position: absolute;
+	    left: 0;
+	    color: #0066cc;
+	    font-size: 1.2rem;
+	    font-weight: bold;
+	}
+
+	.sub-category {
+	    margin-top: 5px;
+	    padding-left: 30px; 
+	}
+
+	.sub-category li {
+	    font-size: 1rem;
+	    font-weight: normal;
+	    padding-left: 18px;
+	    position: relative;
+	}
+
+	.sub-category li::before {
+	    content: "›"; 
+	    position: absolute;
+	    left: 0;
+	    color: #0080ff;
+	    font-size: 1.1rem;
+	    font-weight: bold;
+	}
+	
+	.more-link {
+	    text-align: left;
+	    margin-top: 10px;
+	}
+
+	.more-link a {
+	    text-decoration: underline;
+	}
+
+	.footer {
+	    text-align: center;
+	    margin-top: 50px;
+	    font-size: 14px;
+	    color: #666666;
+	}
+	
+	.footnote {
+        text-align: right;
+        font-size: 0.8em;
+        color: #666;
+        margin-top: -30px;
+      }
+
+	hr {
+	    margin: 40px 0;
+	    border: 0;
+	    border-top: 1px solid #dddddd;
+	}
+
+	ul, ol {
+	    padding-left: 20px;
+	    margin-top: 10px;
+	}
+
+	li {
+	    margin-bottom: 10px;
+	}
+
+	.content, .publication-list {
+	    list-style: none;
+	    padding-left: 0;
+	}
+
+	.content li, .publication-list li {
+	    margin-bottom: 10px;
+	}
+	
+	/* Hero Section */
+	.hero {
+	    text-align: center;
+	    padding: 50px 20px;
+	    background: #f5f5f5;
+	}
+
+	.hero p {
+	  
+	    margin-top: 10px;
+	}
+
+	.research-box {
+	    background: #ffffff;
+	    border: 2px solid #007bff; 
+	    border-radius: 8px;
+	    padding: 20px;
+	    margin-bottom: 20px;
+	    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.research-box h3 {
+	    font-size: 1.5rem;
+	    color: #007bff;
+	    margin-bottom: 10px;
+	    border-bottom: 2px solid #007bff;
+	    padding-bottom: 5px;
+	    display: inline-block;
+	}
+
+	.research-box p {
+	    font-size: 1rem;
+	    margin-top: 10px;
+	    color: #333;
+	}
+	
+	@media screen and (max-width: 768px) {
+	    .research-box {
+	        padding: 15px;
+	        margin-bottom: 15px;
+	    }
+	}
+
+	.timeline {
+	    list-style: none;
+	    margin: 20px 0;
+	    padding-left: 10px;
+	}
+
+	.timeline li {
+	    position: relative;
+	    padding-left: 20px;
+	    margin-bottom: 10px;
+	}
+
+	.timeline .year {
+	    font-weight: bold;
+	    color: #007bff;
+	}
+
+	.timeline .title {
+	    font-weight: 600;
+	}
+	
+	.industry-applications {
+	    margin-top: 40px;
+	   
+	}
+
+	.logo-grid {
+	     display: grid;
+	    grid-template-columns: repeat(3, 1fr); 
+	    gap: 20px; 
+	    justify-items: center;
+	    align-items: center;
+	    margin-top: 20px;
+	     text-align: center;
+	}
+
+	.logo-grid img {
+	    max-height: 60px;
+	    width: auto;
+	    max-width: 300px;
+	    object-fit: contain;
+	    padding: 5px;
+	    background: #fff;
+	    border-radius: 8px; 
+	    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	     text-align: center;
+	}
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .navigation {
+                width: 100%;
+                height: auto;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 30px;
+                max-width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .navigation {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .main {
+                padding: 20px;
+            }
+        }  
+	
+	.pps-gif-section {
+	    text-align: center;
+	    margin-top: 30px;
+	}
+
+	.gif-container {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    max-width: 600px; 
+	    margin: 0 auto;
+	    border-radius: 8px; 
+	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+	    overflow: hidden;
+	}
+
+	.gif-container img {
+	    width: 55%;
+	    height: auto;
+	    display: block;
+	    border-radius: 8px;
+	}
+	
+  .philosophy-container {
+        display: flex;
+        justify-content: space-between; 
+        gap: 40px; 
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    .philosophy-box {
+        flex: 1; 
+        background: #f5f5f5;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        min-width: 300px; 
+    }
+
+    .philosophy-box h2 {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .philosophy-box ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .philosophy-box li {
+        font-size: 16px;
+        margin-bottom: 8px;
+        padding-left: 18px;
+        position: relative;
+    }
+
+    .philosophy-box li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #007bff;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 768px) {
+        .philosophy-container {
+            flex-direction: column;
+            gap: 20px;
+            align-items: center; 
+        }
+
+        .philosophy-box {
+            width: 100%;
+            max-width: 500px; 
+        }
+    }
