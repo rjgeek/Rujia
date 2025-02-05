@@ -17,13 +17,12 @@ var _hmt = _hmt || [];
 </script>
 
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-    
 <meta name="description" content="Dr. Rujia Li is a Postdoctoral Fellow at Tsinghua University. His research focuses on privacy-preserving smart contracts, blockchain security, and cryptographic protocols.">
 <meta name="keywords" content="Rujia Li, Blockchain Security, Privacy-Preserving Smart Contracts, Cryptography, TEE, Consensus Protocols">
 <meta name="author" content="Dr. Rujia Li">
 <meta name="robots" content="index, follow">
 
-<title>Rujia Li - Overview</title>
+<title>Rick Rujia Li</title>
 <!-- Google Fonts -->
 <link href="font-style.css" rel="stylesheet">
  <link href="style.css" rel="stylesheet">
@@ -60,11 +59,11 @@ var _hmt = _hmt || [];
 
             <h2 id="research" class="section-title">Research Interests</h2>
             <div class="research-topics">
-             My research focuses on <b><a href="#research-section">Privacy-Preserving Smart Contracts (PPSCs)</a></b>, with a particular emphasis on 
+             My research focuses on <b><a href="javascript:void(0);" onclick="showSection('research-section')">Privacy-Preserving Smart Contracts (PPSCs)</a></b>, with a particular emphasis on 
              improving the (economic-level and system-level) security of consensus algorithms and privacy-preserving technologies that underpin the design and implementation of PPSCs.
              <ul class="sub-category">
-                <li>Hybrid consensus algorithm (POW<sup><a href="#footnote">[1]</a></sup> + BFT<sup><a href="#footnote">[2]</a></sup>) </li>
-                <li>Hybrid privacy-preserving technology (TEE<sup><a href="#footnote">[3]</a></sup> + cryptography)</li>
+                <li>Hybrid consensus algorithm (GHOST + BFT) <sup><a href="#footnote">[1]</a></sup></li>
+                <li>Hybrid privacy-preserving technology (TEE<sup><a href="#footnote">[2]</a></sup> + cryptographic primitives<sup><a href="#footnote">[3]</a></sup>)</li>
             </ul>
             </div>
 
@@ -92,9 +91,9 @@ var _hmt = _hmt || [];
              <hr>
              <div class="footnote" id = "footnote">
 		    <small>
-		        [1] <b>PoW (Proof of Work)</b> is a consensus algorithm where miners solve cryptographic puzzles to validate transactions. <br>
-		        [2] <b>BFT (Byzantine Fault Tolerance) </b> ensures system to achieve consensus even when some nodes behave maliciously or fail. <br>
-		        [3] <b>TEE (Trusted Execution Environment) </b> is a secure enclave within a processor that enables confidential computation.
+		        [1] <b>Hybrid Consensus Algorithm</b> integrates multiple distinct consensus models, typically combining Greedy Heaviest-Observed Sub-Tree (GHOST) -type longest chain rules with Byzantine Fault Tolerance (BFT)  voting-based protocols, to enhance security and finality while mitigating the limitations of individual consensus mechanisms. <br>
+		        [2] <b>TEE (Trusted Execution Environment) </b> is a secure enclave within a processor that enables confidential computation. <br>
+		        [3] <b>Cryptographic primitives </b> are well-established cryptographic algorithms used to build high-level cryptographic protocols. <br>
 		    </small>
 		</div>
             <div class="footer">Last updated 05/02/2025, Rujia</div>
@@ -120,29 +119,29 @@ var _hmt = _hmt || [];
             <h2 class="section-title">Research Areas</h2>
             <!-- Hybrid Consensus -->
             <div class="research-box">
-                <h3>Hybrid Consensus Algorithm (PoW + BFT)</h3>
-                <p>Analyzing vulnerabilities in state-of-the-art consensus mechanisms and propose enhanced, secure alternatives.</p>
+                <h3>Hybrid Consensus Algorithm (GHOST + BFT)</h3>
+                <p>Analyzing vulnerabilities in state-of-the-art hybrid consensus mechanisms and propose enhanced, secure alternatives.</p>
 
                 <ul class="timeline">
                     <li>
                         <span class="year">2024</span>
-                        <span class="title">PoS Attack Remediation</span> (USENIX Security'25)
+                        <span class="title">PoS Attack Remediation</span> (<i>USENIX Security'25</i>)
                     </li>
                     <li>
                         <span class="year">2023</span>
-                        <span class="title">PoS Attack Analysis</span> (USENIX Security'24)
+                        <span class="title">PoS Attack Analysis</span> (<i>USENIX Security'24</i>)
                     </li>
                     <li>
                         <span class="year">2022</span>
-                        <span class="title">PoA Algorithm Vulnerabilities</span> (WWW'23, ASIACCS'22, ICBC'22)
+                        <span class="title">PoA Algorithm Vulnerabilities</span> (<i>WWW'23</i>, <i>ASIACCS'22</i>, <i>ICBC'22</i>)
                     </li>
                     <li>
                         <span class="year">2021</span>
-                        <span class="title">BFT Attack Framework</span> (ACM DLT'22)
+                        <span class="title">BFT Attack Framework</span> (<i>ACM DLT'22</i>)
                     </li>
                     <li>
                         <span class="year">2020</span>
-                        <span class="title">Weak Consensus Algorithm</span> (INFOCOM'21, NDSS Poster'21)
+                        <span class="title">Weak Consensus Algorithm</span> (<i>INFOCOM'21</i>, <i>NDSS Poster'21</i>)
                     </li>
                 </ul>
             </div>
@@ -155,19 +154,19 @@ var _hmt = _hmt || [];
                 <ul class="timeline">
                     <li>
                         <span class="year">2024</span>
-                        <span class="title">TEE + MPC </span>  (Ongoing Work)
+                        <span class="title">TEE + MPC </span>  (<i>Ongoing Work</i>)
                     </li>
                      <li>
                         <span class="year">2023</span>
-                        <span class="title">TEE & Secure Mempool</span> (<a href="https://eprint.iacr.org/2023/1034.pdf" target="_blank">Ongoing Work</a>)
+                        <span class="title">Secure Blockchain Mempool using TEE</span> (<i><a href="https://eprint.iacr.org/2023/1034.pdf" target="_blank">Ongoing Work</a></i>)
                     </li>
                     <li>
                         <span class="year">2023</span>
-                        <span class="title">Accountability Protocols</span> (<a href="https://eprint.iacr.org/2023/1519.pdf" target="_blank">IEEE TIFS'25, Ongoing Work</a>)
+                        <span class="title">Accountability Protocols</span> (<i><a href="https://eprint.iacr.org/2023/1519.pdf" target="_blank">IEEE TIFS'25</a></i>)
                     </li>
                     <li>
                         <span class="year">2022</span>
-                        <span class="title">TEE-Enhanced Smart Contracts</span> (PETS'22, ISC'20, CBT'19)
+                        <span class="title">TEE-Enhanced Smart Contracts</span> (<i>PETS'22</i>, <i>ISC'20</i>, <i>CBT'19</i>)
                     </li>
                 </ul>
             </div>
@@ -221,22 +220,20 @@ var _hmt = _hmt || [];
 
     <h2 id="position" class="section-title">Position</h2>
     <ul class="biography-list">
-        <li><strong>Postdoctoral Fellow</strong>, <a href="https://www.ias.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a> (01/2023-now)</li>
-        <li><strong>Visiting Scholar</strong>, <a href="https://www.ias.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a> (08/2022-12/2022)</li>
-        <li><strong>Research Team Leader</strong>, <a href="https://cryptosus.tech" target="_blank">COCRYTO LAB</a>, SUSTech (03/2022-now)</li>
-        <li><strong>Internship</strong>, <a href="https://intranet.birmingham.ac.uk/it/Innovation/Innovation-community.aspx" target="_blank">University of Birmingham Innovation Centre</a> (06/2017-09/2017)</li>
-        <li><strong>Secure Architect Assistant</strong>, <a href="https://en.wikipedia.org/wiki/State_Grid_Corporation_of_China" target="_blank">State Grid Information & Telecommunication</a> (12/2014-08/2016)</li>
-        <li><strong>R & D Engineer</strong>,  <a href="https://en.wikipedia.org/wiki/State_Grid_Corporation_of_China" target="_blank">State Grid Electric Power Research Institute</a>  (04/2013-11/2014) </li>
+        <li><strong>Postdoctoral Fellow</strong>, <a href="https://www.ias.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a> (01/2023 — now)</li>
+        <li><strong>Visiting Scholar</strong>, <a href="https://www.ias.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a> (08/2022 — 12/2022)</li>
+        <li><strong>Research Team Leader</strong>, <a href="https://cryptosus.tech" target="_blank">COCRYTO LAB</a>, SUSTech (03/2022 — 07/2022)</li>
+        <li><strong>Internship</strong>, <a href="https://intranet.birmingham.ac.uk/it/Innovation/Innovation-community.aspx" target="_blank">University of Birmingham Innovation Centre</a> (06/2017 — 09/2017)</li>
+        <li><strong>Secure Architect Assistant</strong>, <a href="https://en.wikipedia.org/wiki/State_Grid_Corporation_of_China" target="_blank">State Grid Information & Telecommunication</a> (12/2014 — 08/2016)</li>
+        <li><strong>R & D Engineer</strong>,  <a href="https://en.wikipedia.org/wiki/State_Grid_Corporation_of_China" target="_blank">State Grid Electric Power Research Institute</a>  (04/2013 — 11/2014) </li>
     </ul>
 
     <h2 id="education" class="section-title">Education</h2>
     <div class="biography-grid">
         <ul class="biography-list">
-            <li>Ph.D. in Computer Science (CS), <a href="https://www.birmingham.ac.uk/" target="_blank">University of Birmingham</a> (01/2018 - 03/2022)</li>
-            <li>Master of Advanced CS, <a href="https://www.birmingham.ac.uk/" target="_blank">University of Birmingham</a> (09/2016 - 01/2018)</li>
-        </ul>
-        <ul class="biography-list">
-            <li>Double Bachelor in Business Administration and CS, <a href="https://en.whu.edu.cn/" target="_blank">Wuhan University</a> (09/2009-07/2013)</li>
+            <li>Ph.D. in Computer Science (CS), <a href="https://www.birmingham.ac.uk/" target="_blank">University of Birmingham</a> (01/2018 — 03/2022)</li>
+            <li>Master of Advanced CS, <a href="https://www.birmingham.ac.uk/" target="_blank">University of Birmingham</a> (09/2016 — 01/2018)</li>
+            <li>Double Bachelor in Business Administration and CS, <a href="https://en.whu.edu.cn/" target="_blank">Wuhan University</a> (09/2009 — 07/2013)</li>
         </ul>
     </div>
 
@@ -342,39 +339,37 @@ var _hmt = _hmt || [];
               <h2 class="section-title">Conferences (external reviewer)</h2>
 		<ul  class="content">
 		  <li>Financial Cryptography and Data Security  <a target="_blank"  href = "https://fc23.ifca.ai/"> (FC) 2023</a>, <a target="_blank"  href = "https://fc25.ifca.ai/cfp.html">(FC) 2025</a></li>
-		  <li><a target="_blank"  href = "https://petsymposium.org/2024/">The 24th Privacy Enhancing Technologies Symposium (PETS) 2024</a></li>
+		  <li>Privacy Enhancing Technologies Symposium <a target="_blank"  href = "https://petsymposium.org/2024/">(PETS) 2024</a></li>
 		  <li>ACM Conference on Computer and Communications Security <a target="_blank"  href = "https://www.sigsac.org/ccs/CCS2023/index.html">(CCS) 2023</a>, <a target="_blank"  href = "https://www.sigsac.org/ccs/CCS2024/home.html">(CCS)2024</a></li>
-		  <li><a target="_blank"  href = "https://sp2024.ieee-security.org/index.html">The 45th IEEE Symposium on Security and Privacy (IEEE S&P) 2024</a></li>
+		  <li>IEEE Symposium on Security and Privacy <a target="_blank"  href = "https://sp2024.ieee-security.org/index.html">(IEEE S&P) 2024</a></li>
 		  <li>The Network and Distributed System Security Symposium <a target="_blank"  href = "https://www.ndss-symposium.org/ndss2023/"> (NDSS) 2023, </a><a target="_blank"  href = "https://www.ndss-symposium.org/ndss2024/">(NDSS) 2024</a>, <a target="_blank"  href = "https://www.ndss-symposium.org/ndss2025/"> (NDSS) 2025</a></li>
-		  <li><a target="_blank"  href = "https://www.ieee-security.org/TC/EuroSP2023/">IEEE European Symposium on Security and Privacy (EuroS&P)2023</a></li>
-		  <li><a target="_blank"  href = "https://dsn2023.dei.uc.pt/">IEEE/IFIP International Conference on Dependable Systems and Networks (DSN) 2023</a></li>
-		  <li><a target="_blank"  href = "https://sites.uclouvain.be/OPODIS2022/">Conference on Principles of Distributed Systems (OPODIS) 2022</a></li>
+		  <li>IEEE European Symposium on Security and Privacy<a target="_blank"  href = "https://www.ieee-security.org/TC/EuroSP2023/"> (EuroS&P)2023</a></li>
+		  <li>IEEE/IFIP International Conference on Dependable Systems and Networks <a target="_blank"  href = "https://dsn2023.dei.uc.pt/">(DSN) 2023</a></li>
+		  <li>Conference on Principles of Distributed Systems <a target="_blank"  href = "https://sites.uclouvain.be/OPODIS2022/"> (OPODIS) 2022</a></li>
 		</ul>
 
 		 <h2 class="section-title">Journals</h2>
 		 <ul  class="content">
-		  <li><a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8858">IEEE Transactions on Dependable and Secure Computing (IEEE TDSC) 2023, (IEEE TDSC) 2024</a></li>
-		  <li><a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206">IEEE Transactions on Information Forensics and Security (IEEE TIFS) 2022</a></li>
-		  <li><a target="_blank"  href = "https://dl.acm.org/journal/tosem">ACM Transactions on Software Engineering and Methodology (IEEE TOSEM)2022 </a></li>
-		  <li><a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4275028">IEEE Transactions on Network and Service Management (IEEE TNSM) 2022 </a></li>
-		  <li><a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=25">IEEE Transactions on Vehicular Technology (IEEE TVT) 2021</a></li>
-		  <li><a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=71">IEEE Transactions on Parallel and Distributed Systems (IEEE TPDS) 2022 </a></li>
-		  <li><a target="_blank"  href = "https://www.sciencedirect.com/journal/future-generation-computer-systems">Future Generation Computer Systems (FGCS) 2020 </a></li>
-		  <li><a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=52">IEEE Software (IEEE Softw) 2019 </a></li>
+		  <li>IEEE Transactions on Dependable and Secure Computing  <a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8858">(IEEE TDSC) 2023, (IEEE TDSC) 2024</a></li>
+		  <li>IEEE Transactions on Information Forensics and Security <a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206"> (IEEE TIFS) 2022</a></li>
+		  <li>ACM Transactions on Software Engineering and Methodology <a target="_blank"  href = "https://dl.acm.org/journal/tosem"> (IEEE TOSEM)2022 </a></li>
+		  <li>IEEE Transactions on Network and Service Management <a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4275028"> (IEEE TNSM) 2022 </a></li>
+		  <li>IEEE Transactions on Vehicular Technology <a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=25"> (IEEE TVT) 2021</a></li>
+		  <li>IEEE Transactions on Parallel and Distributed Systems <a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=71"> (IEEE TPDS) 2022 </a></li>
+		  <li>Future Generation Computer Systems <a target="_blank"  href = "https://www.sciencedirect.com/journal/future-generation-computer-systems"> (FGCS) 2020 </a></li>
+		  <li>IEEE Software <a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=52"> (IEEE Softw) 2019 </a></li>
 		</ul>
             
 		<h2 class="section-title">Research Students</h2>
 		<div>
 			I am fortunate to collaborate with these excellent students.
-
-			<!--<h2 class="section-title">Current students</h2> -->
 			<ul  class="content">
 				<li><a href = "" target="_blank">Jingyuan Ding</a> (2024-now) (now master student at <a href = "" target="_blank">Shandong University</a>)</li>
 				<li><a href = "" target="_blank">Kaikai Feng</a> (2023-now) (now PhD student at <a href = "" target="_blank">Shandong University</a>)</li>
 				<li><a href = "" target="_blank">Youheng Wang</a> (2023-now) (now PhD student at <a href = "" target="_blank">Shandong University</a>)</li>
 				<li><a href = "" target="_blank">Mingfei Zhang</a> (2022-now) (now PhD student at <a href = "" target="_blank">Shandong University</a>)</li>
 				<li><a href = "" target="_blank">Si Liu</a> (2021-now) (now lecturer at <a href = "" target="_blank">Zhengzhou Normal University</a>)</li>
-				<li><a href = "" target="_blank">Yuanchao Li</a> (2020-now) (now master student at <a href = "https://www.sustech.edu.cn/en/" target="_blank">Southern University of Science and Technology</a>)</li>
+				<li><a href = "" target="_blank">Yuanchao Li</a> (2020-now) (now PhD student at <a href = "https://www.sustech.edu.cn/en/" target="_blank">Southern University of Science and Technology</a>)</li>
 				<li><a href = "" target="_blank">Xuanwei Hu</a> (2020-now) (now master student at <a href = "https://www.sustech.edu.cn/en/" target="_blank">Southern University of Science and Technology</a>)</li>
 			    <li><a href = "" target="_blank">Xinrui Zhang</a> (2020-now) (now PhD student at <a href = "https://www.sydney.edu.au/" target="_blank">the University of Sydney</a>)</li>
 			</ul>
@@ -390,10 +385,10 @@ var _hmt = _hmt || [];
 		
 		<h2 class="section-title">Teaching</h2>
 		<div>
-			Teaching assistant(TA) for following courses.
+			Teaching assistant (TA) for following courses.
 			<ul  class="content">
-				<li>English for Career Development (2019,S1) with <a href = "https://www.linkedin.com/in/natfergs/" target="_blank">Natalie M. Ferguson</a> </li> 
-				<li>Cryptography and Network Security (2019,S2) with <a href = "https://eee.sustc.edu.cn/p/wangqi/" target="_blank">Dr. Qi Wang</a></li>
+				<li>English for Career Development (2019, S1) with <a href = "https://www.linkedin.com/in/natfergs/" target="_blank">Natalie M. Ferguson</a> </li> 
+				<li>Cryptography and Network Security (2019, S2) with <a href = "https://eee.sustc.edu.cn/p/wangqi/" target="_blank">Dr. Qi Wang</a></li>
 			</ul>
 		</div>
 
@@ -459,25 +454,33 @@ var _hmt = _hmt || [];
 
 <script>
      function showSection(sectionId) {
-	    // Hide all sections
+	  
 	    document.querySelectorAll('.section').forEach(section => {
-	        section.style.display = 'none';
+        section.style.display = 'none';
 	    });
 
 	    // Show the selected section
 	    const section = document.getElementById(sectionId);
-	    section.style.display = 'block';
+	    if (section) {
+	        section.style.display = 'block';
+	    }
+
+	    // Remove "active" class from all navigation links
+	    document.querySelectorAll('.navigation a').forEach(link => {
+	        link.classList.remove('active');
+	    });
+
+	    // Add "active" class to the correct navigation link
+	    document.querySelectorAll('.navigation a').forEach(link => {
+	        if (link.getAttribute("onclick") === `showSection('${sectionId}')`) {
+	            link.classList.add('active');
+	        }
+	    });
 
 	    // If the Research section is selected, load the GIF dynamically
 	    if (sectionId === 'research-section') {
 	        loadResearchGif();
 	    }
-
-	    // Update the active state in the navigation
-	    document.querySelectorAll('.navigation a').forEach(link => {
-	        link.classList.remove('active');
-	    });
-	    event.target.classList.add('active');
 	}
 	showSection('home-section');
 	function loadResearchGif() {
