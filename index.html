@@ -1,8 +1,10 @@
-<HTML>
+<!DOCTYPE html>
+<html lang="en">
 
-<HEAD>
-
-<TITLE>Rujia Li</TITLE>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
 var _hmt = _hmt || [];
@@ -15,43 +17,927 @@ var _hmt = _hmt || [];
 </script>
 
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8">
-<style type="text/css">
-    a{ 
-    	color: #0000cc;
-	} 
-    a:hover{
-	   color:#DF731D;
-	} 
-	a:visited{
-	   color:#DF731D;
-	} 
+    
+<meta name="description" content="Dr. Rujia Li is a Postdoctoral Fellow at Tsinghua University. His research focuses on privacy-preserving smart contracts, blockchain security, and cryptographic protocols.">
+<meta name="keywords" content="Rujia Li, Blockchain Security, Privacy-Preserving Smart Contracts, Cryptography, TEE, Consensus Protocols">
+<meta name="author" content="Dr. Rujia Li">
+<meta name="robots" content="index, follow">
+
+   <title>Rujia Li - Overview</title>
+
+    <!-- Google Fonts -->
+    <link href="font-style.css" rel="stylesheet">
+   
+   <style>
+  /* 默认隐藏所有 section */
+        .section {
+            display: none;
+        }
+
+        /* 默认显示 Home 页面 */
+        #home-section {
+            display: block;
+        }
+
+        /* 通用重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: 'Roboto', sans-serif;
+            background: #ffffff;
+            color: #333333;
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-y: scroll;
+        }
+
+        /* 主布局 */
+        .container {
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+        }
+
+        /* 左侧导航栏 */
+        .navigation {
+            width: 250px;
+            min-height: 100vh;
+            background: #000;
+            padding: 20px;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navigation img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .navigation a {
+            color: #ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px 0;
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+        }
+        /* 选中状态 */
+	.navigation a.active {
+	    background: #1a1a1a;
+	    font-weight: bold;
+	    border-left: 4px solid #007bff;
+	    padding-left: 12px; /* 让选中效果更明显 */
+	    color: #007bff;
+	}
+        .navigation a:hover {
+            background: #333333;
+        }
+
+        /* 选中状态 */
+        .navigation a.active {
+            background: #1a1a1a;
+            font-weight: bold;
+            border-left: 4px solid #007bff;
+            padding-left: 12px;
+            color: #007bff;
+        }
+       
+	/* 鼠标悬停 */
+	.navigation a:hover {
+	    background: #0056b3;
+	}
+
+        /* 右侧内容区域 */
+        .main {
+            flex: 1;
+            padding: 50px;
+            margin-left: 250px;
+            max-width: 900px;
+            overflow-y: auto;
+        }
+        
+        /* 标题样式 */
+	.header-title {
+	    text-align: center;
+	    font-size: 32px;
+	    font-weight: 800;
+	    text-transform: uppercase;
+	    color: #333333;
+	    margin-bottom: 30px;
+	}
+        /* 章节标题 */
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            display: inline-block;
+            border-bottom: 2px solid #007bff;
+        }
+        
+          /* 主类别样式 */
+	.research-topics ul {
+	    list-style: none;
+	    padding-left: 0;
+	}
+
+	.research-topics li {
+	    font-size: 1.1rem;
+	    font-weight: 500;
+	    margin-bottom: 8px;
+	    position: relative;
+	    /* padding-left: 20px;*/
+	}
+
+	.research-topics li::before {
+	    content: "•";
+	    position: absolute;
+	    left: 0;
+	    color: #0066cc;
+	    font-size: 1.2rem;
+	    font-weight: bold;
+	}
+
+	/* 子类别样式 */
+	.sub-category {
+	    margin-top: 5px;
+	    padding-left: 30px; /* 增加缩进 */
+	}
+
+	.sub-category li {
+	    font-size: 1rem;
+	    font-weight: normal;
+	    padding-left: 18px;
+	    position: relative;
+	}
+
+	.sub-category li::before {
+	    content: "›"; /* 子类别使用箭头 */
+	    position: absolute;
+	    left: 0;
+	    color: #0080ff; /* 子类别颜色稍浅 */
+	    font-size: 1.1rem;
+	    font-weight: bold;
+	}
+	
+	/* "More News" 样式 */
+	.more-link {
+	    text-align: left;
+	    margin-top: 10px;
+	}
+
+	.more-link a {
+	    text-decoration: underline;
+	}
+
+	/* 页脚 */
+	.footer {
+	    text-align: center;
+	    margin-top: 50px;
+	    font-size: 14px;
+	    color: #666666;
+	}
+	
+	.footnote {
+        text-align: right;
+        font-size: 0.8em;
+        color: #666;
+        margin-top: -30px;
+      }
+
+	/* 分隔线 */
+	hr {
+	    margin: 40px 0;
+	    border: 0;
+	    border-top: 1px solid #dddddd;
+	}
+
+	/* 列表样式 */
+	ul, ol {
+	    padding-left: 20px;
+	    margin-top: 10px;
+	}
+
+	li {
+	    margin-bottom: 10px;
+	}
+
+	/* 新闻、论文、内容列表 */
+	.content, .publication-list {
+	    list-style: none;
+	    padding-left: 0;
+	}
+
+	.content li, .publication-list li {
+	    margin-bottom: 10px;
+	}
+	
+	/* Hero Section */
+	.hero {
+	    text-align: center;
+	    padding: 50px 20px;
+	    background: #f5f5f5;
+	}
+
+	.hero p {
+	  
+	    margin-top: 10px;
+	}
+
+	.research-box {
+	    background: #ffffff;
+	    border: 2px solid #007bff; /* 添加蓝色边框 */
+	    border-radius: 8px; /* 让方框圆角 */
+	    padding: 20px;
+	    margin-bottom: 20px;
+	    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 增加阴影 */
+	}
+
+	.research-box h3 {
+	    font-size: 1.5rem;
+	    color: #007bff;
+	    margin-bottom: 10px;
+	    border-bottom: 2px solid #007bff;
+	    padding-bottom: 5px;
+	    display: inline-block;
+	}
+
+	.research-box p {
+	    font-size: 1rem;
+	    margin-top: 10px;
+	    color: #333;
+	}
 	
 	
-</style>
 
-</HEAD>
+	/* 响应式布局，适配小屏幕 */
+	@media screen and (max-width: 768px) {
+	    .research-box {
+	        padding: 15px;
+	        margin-bottom: 15px;
+	    }
+	}
 
-<!--<FRAMESET ROWS="20%,*" BORDER=0 FRAMEBORDER=0>
-<FRAME SRC="top.html" NAME="top" SCROLLING=NO NORESIZE> -->
+	/* Timeline */
+	.timeline {
+	    list-style: none;
+	    margin: 20px 0;
+	    padding-left: 10px;
+	}
 
-<FRAMESET COLS="16%,*" BORDER=1 FRAMEBORDER=1>
+	.timeline li {
+	    position: relative;
+	    padding-left: 20px;
+	    margin-bottom: 10px;
+	}
 
-<FRAME SRC="navigation.html" NAME="navigation" SCROLLING=AUTO>
+	.timeline .year {
+	    font-weight: bold;
+	    color: #007bff;
+	}
 
-<FRAME SRC="main.html" NAME="main" SCROLLING=YES>
+	.timeline .title {
+	    font-weight: 600;
+	}
+	
+	.industry-applications {
+	    margin-top: 40px;
+	   
+	}
 
-</FRAMESET>
+	.logo-grid {
+	     display: grid;
+	    grid-template-columns: repeat(3, 1fr); /* 每行 4 列 */
+	    gap: 20px; /* 控制 Logo 之间的间距 */
+	    justify-items: center;
+	    align-items: center;
+	    margin-top: 20px;
+	     text-align: center;
+	}
+
+	.logo-grid img {
+	    max-height: 60px; /* 统一高度，防止大小完全一致 */
+	    width: auto;
+	    max-width: 300px; /* 限制最大宽度，保证不会变形 */
+	    object-fit: contain;
+	    padding: 5px;
+	    background: #fff;
+	    border-radius: 8px; /* 圆角 */
+	    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	     text-align: center;
+	}
 
 
-<!--</FRAMESET>-->
+        /* 响应式设计 */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
 
-<NOFRAMES>
+            .navigation {
+                width: 100%;
+                height: auto;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
 
-<h4> Your Browser Doesn't Support Frames.</h4>
+            .main {
+                margin-left: 0;
+                padding: 30px;
+                max-width: 100%;
+            }
+        }
 
-</NOFRAMES>
+        @media screen and (max-width: 480px) {
+            .navigation {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .main {
+                padding: 20px;
+            }
+        }  
+	
+	.pps-gif-section {
+	    text-align: center;
+	    margin-top: 30px;
+	}
 
+	.gif-container {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    max-width: 600px; /* 控制最大宽度 */
+	    margin: 0 auto;
+	    border-radius: 8px; /* 圆角 */
+	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+	    overflow: hidden;
+	}
 
+	.gif-container img {
+	    width: 55%;
+	    height: auto;
+	    display: block;
+	    border-radius: 8px;
+	}
+	
+  .philosophy-container {
+        display: flex;
+        justify-content: space-between; /* 让两列均匀排列 */
+        gap: 40px; /* 控制两列之间的间距 */
+        align-items: flex-start;
+        margin-top: 20px;
+    }
 
-</HTML> 
+    .philosophy-box {
+        flex: 1; /* 让两个部分宽度均等 */
+        background: #f5f5f5;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        min-width: 300px; /* 设定最小宽度，防止过窄 */
+    }
+
+    .philosophy-box h2 {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .philosophy-box ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .philosophy-box li {
+        font-size: 16px;
+        margin-bottom: 8px;
+        padding-left: 18px;
+        position: relative;
+    }
+
+    .philosophy-box li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #007bff;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    /* 在小屏幕（宽度小于 768px）时改为竖向排列，并且让宽度一致 */
+    @media screen and (max-width: 768px) {
+        .philosophy-container {
+            flex-direction: column;
+            gap: 20px; /* 调整间距 */
+            align-items: center; /* 居中对齐 */
+        }
+
+        .philosophy-box {
+            width: 100%; /* 让两个框的宽度相同 */
+            max-width: 500px; /* 限制最大宽度，防止过宽 */
+        }
+    }
+    
+   
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navigation">
+            <img src="./image/rujia_new.png" alt="Profile Image">
+            <a onclick="showSection('home-section')">Home</a>
+            <a onclick="showSection('research-section')">Research</a>
+            <a onclick="showSection('publication-section')">Publication</a>
+            <a onclick="showSection('biography-section')">Biography</a>
+            <a onclick="showSection('service-section')">Service</a>
+            <a onclick="showSection('misc-section')">Misc</a>
+            <a onclick="showSection('contact-section')">Contact</a>
+        </div>
+
+        <div class="main">
+
+            <!-- Home -->
+            <div id="home-section" class="section">
+                <h1 class="header-title">Rick Rujia Li</h1>   
+                <p class="content">
+                I am a Postdoctoral Fellow and <a href="https://www.tsinghua.edu.cn/en/info/1245/5132.htm" target="_blank">Shuimu Tsinghua Scholar</a> at the 
+                <a href="https://www.ias.tsinghua.edu.cn/en/" target="_blank">Institute for Advanced Study</a>, 
+                <a href="https://www.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a>, collaborating with 
+                    <a href="https://fififish.github.io/sisiduan/" target="_blank">Dr. Sisi Duan</a>.
+                I received my Ph.D. in Computer Science from the <a href="https://www.birmingham.ac.uk/index.aspx" target="_blank">University of Birmingham</a> (Joint Program with 
+                <a href="http://www.sustech.edu.cn/en/" target="_blank">SUSTech</a>), advised by <a href="http://www.dgalindo.es/" target="_blank">Dr. David Galindo</a>, 
+                <a href="https://eee.sustc.edu.cn/p/wangqi/" target="_blank">Dr. Qi Wang</a>, and <a href="https://www.cs.bham.ac.uk/~mdr/" target="_blank">Prof. Mark Ryan</a>. 
+            </p>
+
+            <h2 id="research" class="section-title">Research Interests</h2>
+            <div class="research-topics">
+             My research focuses on <b><a href="#research-section">Privacy-Preserving Smart Contracts (PPSCs)</a></b>, with a particular emphasis on 
+             improving the security of consensus algorithms and privacy-preserving technologies that underpin the design and implementation of PPSCs.
+             <ul class="sub-category">
+                <li>Hybrid consensus algorithm (POW<sup><a href="#footnote">[1]</a></sup> + BFT<sup><a href="#footnote">[2]</a></sup>) </li>
+                <li>Hybrid privacy-preserving technology (TEE<sup><a href="#footnote">[3]</a></sup> + cryptography)</li>
+            </ul>
+            </div>
+
+            <h2 class="section-title">Latest News</h2>
+            <ul class="content">
+               <li>[2025-01] <i>Available Attestation: Towards a Reorg-Resilient Solution for Ethereum Proof-of-Stake</i> is accepted by 
+                        <a href="https://eprint.iacr.org/2025/097.pdf" target="_blank">USENIX Security 2025</a>.
+                    </li>
+               <li>[2025-01] <i>Accountable Decryption made Formal and Practical</i> is accepted by 
+                        <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206" target="_blank">IEEE TIFS 2025</a>.
+                    </li>
+                    <li>[2024-10] <i>Bringing Smart Contract Confidentiality via Trusted Hardware: Fact and Fiction</i> is accepted by 
+                        <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206" target="_blank">IEEE TIFS 2024</a>.
+                    </li>
+                    <li>[2024-03] <i>Max Attestation Matters: Making Honest Parties Lose Their Incentives in Ethereum PoS</i> is accepted by 
+                        <a href="https://www.usenix.org/conference/usenixsecurity24" target="_blank">USENIX Security 2024</a>.
+                    </li>
+                    <li>[2023-01] <i>Time-manipulation Attack: Breaking Fairness against Proof of Authority Aura</i> is accepted by 
+                        <a href="https://www2023.thewebconf.org/" target="_blank">WWW 2023</a>.
+                    </li>
+            </ul>
+            
+            <div class="more-link"><a href="news.html">More News</a></div>
+            
+             <hr>
+             <div class="footnote" id = "footnote">
+		    <small>
+		        [1] <b>PoW (Proof of Work)</b> is a consensus algorithm where miners solve cryptographic puzzles to validate transactions. <br>
+		        [2] <b>BFT (Byzantine Fault Tolerance) </b> ensures system to achieve consensus even when some nodes behave maliciously or fail. <br>
+		        [3] <b>TEE (Trusted Execution Environment) </b> is a secure enclave within a processor that enables confidential computation.
+		    </small>
+		</div>
+            <div class="footer">Last updated 05/02/2025, Rujia</div>
+            </div>
+
+            <!-- Research -->
+            <div id="research-section" class="section">
+             <h1 class="header-title">Privacy-Preserving Smart Contracts</h1>
+            <section class="hero">
+	         <!--<h1>Privacy-Preserving Smart Contracts (PPSCs)</h1>-->
+	         <p>Privacy-Preserving Smart Contracts  (PPSCs) are designed to keep the data and transactions confidential while 
+	         ensuring the secure execution of transactions on the blockchain.   
+	         As shown in the diagram below, PPSCs are built on two main components: a consensus algorithm and privacy-preserving technology.</p>
+
+	     <!-- PPSCs Introduction GIF -->
+		<div class="pps-gif-section">
+		    <div class="gif-container">
+		        <img src="image/industry/2.gif" alt="PPSCs Introduction">
+		    </div>
+		</div>
+	     </section>
+
+           <section class="research-topics">
+           <div><p> <br>My research focuses on improving the security of consensus algorithms 
+           and privacy-preserving technologies that underpin the design and implementation of PPSCs.</p>
+           </div>
+           </section>
+            <h2 class="section-title">Research Areas</h2>
+            <!-- Hybrid Consensus -->
+            <div class="research-box">
+                <h3>Hybrid Consensus Algorithm (PoW + BFT)</h3>
+                <p>Analyzing vulnerabilities in state-of-the-art consensus mechanisms and propose enhanced, secure alternatives.</p>
+
+                <ul class="timeline">
+                    <li>
+                        <span class="year">2024</span>
+                        <span class="title">PoS Attack Remediation</span> (USENIX Security'25)
+                    </li>
+                    <li>
+                        <span class="year">2023</span>
+                        <span class="title">PoS Attack Analysis</span> (USENIX Security'24)
+                    </li>
+                    <li>
+                        <span class="year">2022</span>
+                        <span class="title">PoA Algorithm Vulnerabilities</span> (WWW'23, ASIACCS'22, ICBC'22)
+                    </li>
+                    <li>
+                        <span class="year">2021</span>
+                        <span class="title">BFT Attack Framework</span> (ACM DLT'22)
+                    </li>
+                    <li>
+                        <span class="year">2020</span>
+                        <span class="title">Weak Consensus Algorithm</span> (INFOCOM'21, NDSS Poster'21)
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Hybrid Privacy -->
+            <div class="research-box">
+                <h3>Hybrid Privacy-Preserving Technology (TEE + Cryptography)</h3>
+                <p>Integrating Trusted Execution Environment (TEE) with cryptographic techniques to enhance smart contract privacy.</p>
+              
+                <ul class="timeline">
+                    <li>
+                        <span class="year">2024</span>
+                        <span class="title">TEE + MPC </span>  (Ongoing Work)
+                    </li>
+                     <li>
+                        <span class="year">2023</span>
+                        <span class="title">TEE & Secure Mempool</span> (<a href="https://eprint.iacr.org/2023/1034.pdf" target="_blank">Ongoing Work</a>)
+                    </li>
+                    <li>
+                        <span class="year">2023</span>
+                        <span class="title">Accountability Protocols</span> (<a href="https://eprint.iacr.org/2023/1519.pdf" target="_blank">IEEE TIFS'25, Ongoing Work</a>)
+                    </li>
+                    <li>
+                        <span class="year">2022</span>
+                        <span class="title">TEE-Enhanced Smart Contracts</span> (PETS'22, ISC'20, CBT'19)
+                    </li>
+                </ul>
+            </div>
+           
+            <div class="industry-applications">
+	    <h2 class="section-title">Industry Impact</h2>
+	    <p>
+	    The outcomes of our PPSCs research have been adopted by some organizations to improve the privacy and security of their products, including but not limited to:
+	    </p>
+	    
+	     <div class="logo-grid">
+	        <div class="logo-item">
+	            <img src="image/industry/bank.png" alt="The People’s Bank of China">
+	            <p>The People’s Bank of China<sup><a href="#pboct-footnote">[1]</a></sup></p>
+	        </div>
+	        <div class="logo-item">
+	            <img src="image/industry/grid.jpg" alt="State Grid Corporation of China">
+	            <p>State Grid Corporation of China<sup><a href="#stategrid-footnote">[2]</a></sup></p>
+	        </div>
+	        <div class="logo-item">
+	            <img src="image/industry/mobile.png" alt="China Mobile">
+	            <p>China Mobile<sup><a href="#chinamobile-footnote">[3]</a></sup></p>
+	        </div>
+	        <div class="logo-item">
+	            <img src="image/industry/ant.png" alt="Ant Group">
+	            <p>Ant Group<sup><a href="#ant-footnote">[4]</a></sup></p>
+	        </div>
+	        <div class="logo-item">
+	            <img src="image/industry/ethereum.jpg" alt="Ethereum Foundation">
+	            <p>Ethereum Foundation<sup><a href="#ethereum-footnote">[5]</a></sup></p>
+	        </div>
+	    </div>
+	</div>
+	
+	<!-- 脚注部分 -->
+		<div class="footnote">
+		   <hr>
+		    <small>
+		        [1] <b>The People’s Bank of China (PBOC)</b> is China’s central bank, responsible for the country's monetary policy and financial stability. <br>
+		        [2] <b>State Grid Corporation of China</b> is the world’s largest utility company, providing electricity distribution and transmission services. <br>
+		        [3] <b>China Mobile</b> is a major state-owned telecommunications company and the largest mobile network operator in China. <br>
+		        [4] <b>Ant Group</b> is a leading fintech company that operates Alipay, one of the world's largest mobile payment platforms. <br>
+		        [5] <b>Ethereum Foundation</b> is a non-profit organization dedicated to supporting Ethereum’s research, development, and community initiatives.
+		    </small>
+		</div>
+	 </div>
+       
+           <!-- Biography Section -->
+<div id="biography-section" class="section biography-container">
+    <h1 class="header-title">Rick Rujia Li Biography</h1>
+
+    <h2 id="position" class="section-title">Position</h2>
+    <ul class="biography-list">
+        <li><strong>Postdoctoral Fellow</strong>, <a href="https://www.ias.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a> (01/2023-now)</li>
+        <li><strong>Visiting Scholar</strong>, <a href="https://www.ias.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a> (08/2022-12/2022)</li>
+        <li><strong>Research Team Leader</strong>, <a href="https://cryptosus.tech" target="_blank">COCRYTO LAB</a>, SUSTech (03/2022-now)</li>
+        <li><strong>Internship</strong>, <a href="https://intranet.birmingham.ac.uk/it/Innovation/Innovation-community.aspx" target="_blank">University of Birmingham Innovation Centre</a> (06/2017-09/2017)</li>
+        <li><strong>Secure Architect Assistant</strong>, <a href="https://en.wikipedia.org/wiki/State_Grid_Corporation_of_China" target="_blank">State Grid Information & Telecommunication</a> (12/2014-08/2016)</li>
+        <li><strong>R & D Engineer</strong>,  <a href="https://en.wikipedia.org/wiki/State_Grid_Corporation_of_China" target="_blank">State Grid Electric Power Research Institute</a>  (04/2013-11/2014) </li>
+    </ul>
+
+    <h2 id="education" class="section-title">Education</h2>
+    <div class="biography-grid">
+        <ul class="biography-list">
+            <li>Ph.D. in Computer Science (CS), <a href="https://www.birmingham.ac.uk/" target="_blank">University of Birmingham</a> (01/2018 - 03/2022)</li>
+            <li>Master of Advanced CS, <a href="https://www.birmingham.ac.uk/" target="_blank">University of Birmingham</a> (09/2016 - 01/2018)</li>
+        </ul>
+        <ul class="biography-list">
+            <li>Double Bachelor in Business Administration and CS, <a href="https://en.whu.edu.cn/" target="_blank">Wuhan University</a> (09/2009-07/2013)</li>
+        </ul>
+    </div>
+
+    <h2 id="honours" class="section-title">Honours/Certification</h2>
+    <div class="biography-grid">
+        <ul class="biography-list">
+            <li>Shuimu Tsinghua Scholar, <a href="https://www.tsinghua.edu.cn/en/info/1245/5132.htm">Tsinghua University</a> (2023-2024)</li>
+            <li>ITIC People's Choice Awards 2017, <a href="https://blog.bham.ac.uk/itnews/2017/05/05/it-services-innovation-centre-emerging-technology-competition-2017-winners-announced/" target="_blank">ITIC Committee</a> (05/2017)</li>
+        </ul>
+        <ul class="biography-list">
+            <li>Oracle Certified Professional, <a href="https://education.oracle.com/certification" target="_blank">Oracle University</a> (01/2015)</li>
+            <li>Gold Award in Int’l Soft China 2014, National Development and Reform Commission (08/2014)</li>
+        </ul>
+    </div>
+</div>
+
+            <!-- Publications -->
+            <div id="publication-section" class="section">
+            <h1 class="header-title">Publication</h1>
+            <p class="description">The following is a selected list of publications, sorted in reverse chronological order (*equal contribution). 
+            For the full list, please visit my  <a href="https://scholar.google.com/citations?hl=en&user=kqgQAzEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a>.</p>
+
+            <h2 class="section-title">Selected Papers</h2>
+            <ol class="publication-list">
+                    <li>
+                        <b>Available Attestation: Towards a Reorg-Resilient Solution for Ethereum Proof-of-Stake</b>. <br>
+                        <i>34th USENIX Security Symposium (USENIX Security 2025), August 2025</i>. <br>
+                        Mingfei Zhang, <b>Rujia Li</b>, Xueqian Lu, Sisi Duan. [<a href="https://eprint.iacr.org/2025/097.pdf" target="_blank">PDF</a>]
+                    </li>
+                    <li>
+                        <b>Accountable Decryption made Formal and Practical</b>. <br>
+                        <i>IEEE Transactions on Information Forensics and Security (IEEE TIFS 2025), January 2025</i>. <br>
+                        <b>Rujia Li</b>, Yuanzhao Li, Qin Wang, Sisi Duan, Qi Wang, Mark Ryan. [<a href="https://dl.acm.org/doi/10.1109/TIFS.2024.3515808" target="_blank">PDF</a>]
+                    </li>
+                    <li>
+                        <b>Bringing Smart Contract Confidentiality via Trusted Hardware: Fact and Fiction</b>. <br>
+                        <i>IEEE Transactions on Information Forensics and Security (IEEE TIFS 2024), November 2024</i>. <br>
+                        <b>Rujia Li</b>, Qin Wang, Yuanzhao Li, Sisi Duan, Qi Wang, David Galindo. [<a href="https://dl.acm.org/doi/10.1109/TIFS.2024.3484291" target="_blank">PDF</a>]
+                    </li>
+                    <li>
+                        <b>Max Attestation Matters: Making Honest Parties Lose Their Incentives in Ethereum PoS</b>. <br>
+                        <i>33rd USENIX Security Symposium (USENIX Security 2024), August 2024</i>. <br>
+                        Mingfei Zhang, <b>Rujia Li</b>, Sisi Duan. [<a href="https://eprint.iacr.org/2023/1622.pdf" target="_blank">PDF</a>]
+                    </li>
+                    <li>
+                        <b>Time-manipulation Attack: Breaking Fairness against Proof of Authority Aura</b>. <br>
+                        <i>32nd International World Wide Web Conference (WWW 2023), May 2023</i>. <br>
+                        Xinrui Zhang<sup>*</sup>, <b>Rujia Li<sup>*</sup></b>, Qin Wang, Qi Wang, Sisi Duan. [<a href="https://dl.acm.org/doi/pdf/10.1145/3543507.3583252" target="_blank">PDF</a>]
+                    </li>
+                    <li>
+                        <b>SoK: TEE-assisted Confidential Smart Contract</b>. <br>
+                        <i>22nd Privacy Enhancing Technologies Symposium (PETS 2022), July 2022</i>. <br>
+                        <b>Rujia Li<sup>*</sup></b>, Qin Wang<sup>*</sup>, Qi Wang, David Galindo, Mark Ryan. [<a href="https://petsymposium.org/2022/files/papers/issue3/popets-2022-0093.pdf" target="_blank">PDF</a>]
+                    </li>
+                    <li>
+                        <b>Exploring Unfairness on Proof of Authority: Order Manipulation Attacks and Remedies</b>. <br>
+                        <i>17th ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2022), May 2022</i>. <br>
+                        Qin Wang<sup>*</sup>, <b>Rujia Li<sup>*</sup></b>, Shiping Chen, Qi Wang, Yang Xiang. [<a href="https://dl.acm.org/doi/10.1145/3488932.3517394" target="_blank">PDF</a>]
+                    </li>
+                    <li>
+                        <b>A Weak Consensus Algorithm and Its Application to High-Performance Blockchain</b>. <br>
+                        <i>40th IEEE International Conference on Computer Communications (INFOCOM 2021), May 2021</i>. <br>
+                        Qin Wang<sup>*</sup>,  <b>Rujia Li<sup>*</sup></b>. [<a href="https://arxiv.org/pdf/2102.00872.pdf" target="_blank">PDF</a>]
+                    </li>
+                    <li>
+                        <b>An Offline Delegatable Cryptocurrency System</b>. <br>
+                        <i>3rd IEEE International Conference on Blockchain and Cryptocurrency (ICBC 2021), May 2021</i>. <br>
+                        <b>Rujia Li<sup>*</sup></b>, Qin Wang<sup>*</sup>, Xinrui Zhang, Qi Wang, David Galindo, Yang Xiang. [<a href="https://arxiv.org/pdf/2103.12905.pdf" target="_blank">PDF</a>]
+                    </li>
+                    <li>
+                        <b>Poster: An Offline Delegatable Cryptocurrency System</b>. <br>
+                        <i>28th Network and Distributed System Security Symposium (NDSS 2021), February 2021</i>. <br>
+                        <b>Rujia Li</b>, Qin Wang, Xinrui Zhang, Qi Wang, David Galindo, Yang Xiang. [<a href="https://www.ndss-symposium.org/wp-content/uploads/NDSS2021posters_paper_14.pdf" target="_blank">PDF</a>]
+                    </li>
+                    <li>
+                        <b>An Accountable Decryption System Based on Privacy-Preserving Smart Contracts</b>. <br>
+                        <i>23rd Information Security Conference (ISC 2020), December 2020</i>. <br>
+                        <b>Rujia Li</b>, Qin Wang, Feng Liu, Qi Wang, David Galindo. [<a href="https://link.springer.com/chapter/10.1007/978-3-030-62974-8_21" target="_blank">PDF</a>]
+                    </li>
+                    <li>
+                        <b>Auditable Credential Anonymity Revocation Based on Privacy-Preserving Smart Contracts</b>. <br>
+                        <i>ESORICS 2019, 3rd International Workshop on Cryptocurrencies and Blockchain Technology, September 2019</i>. <br>
+                        <b>Rujia Li</b>, David Galindo, Qi Wang. [<a href="https://link.springer.com/chapter/10.1007/978-3-030-31500-9_23" target="_blank">PDF</a>]
+                    </li>
+                </ol>
+                
+            <h2 class="section-title">Thesis</h2>
+            <ol class="publication-list">
+                    <li>
+                       <b> A New Academic Certificate Authentication Using Blockchain Technology.</b> <i>Msc thesis 2017</i>  
+                    </li>
+                     <li>
+                       <b> Design and Evaluation of Blockchain-based Security Protocols.</b>  <i>PhD thesis 2022 </i>  
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Service -->
+            <div id="service-section" class="section">
+            <h1 class="header-title">Service</h1>
+            <!-- <h1>Professional Service</h1> -->
+             <div> I am externaly/internally invited to conduct reviews for the following conferences and journals. </div>
+              <h2 class="section-title">Conferences (external reviewer)</h2>
+		<ul  class="content">
+		  <li>Financial Cryptography and Data Security  <a target="_blank"  href = "https://fc23.ifca.ai/"> (FC) 2023</a>, <a target="_blank"  href = "https://fc25.ifca.ai/cfp.html">(FC) 2025</a></li>
+		  <li><a target="_blank"  href = "https://petsymposium.org/2024/">The 24th Privacy Enhancing Technologies Symposium (PETS) 2024</a></li>
+		  <li>ACM Conference on Computer and Communications Security <a target="_blank"  href = "https://www.sigsac.org/ccs/CCS2023/index.html">(CCS) 2023</a>, <a target="_blank"  href = "https://www.sigsac.org/ccs/CCS2024/home.html">(CCS)2024</a></li>
+		  <li><a target="_blank"  href = "https://sp2024.ieee-security.org/index.html">The 45th IEEE Symposium on Security and Privacy (IEEE S&P) 2024</a></li>
+		  <li>The Network and Distributed System Security Symposium <a target="_blank"  href = "https://www.ndss-symposium.org/ndss2023/"> (NDSS) 2023, </a><a target="_blank"  href = "https://www.ndss-symposium.org/ndss2024/">(NDSS) 2024</a>, <a target="_blank"  href = "https://www.ndss-symposium.org/ndss2025/"> (NDSS) 2025</a></li>
+		  <li><a target="_blank"  href = "https://www.ieee-security.org/TC/EuroSP2023/">IEEE European Symposium on Security and Privacy (EuroS&P)2023</a></li>
+		  <li><a target="_blank"  href = "https://dsn2023.dei.uc.pt/">IEEE/IFIP International Conference on Dependable Systems and Networks (DSN) 2023</a></li>
+		  <li><a target="_blank"  href = "https://sites.uclouvain.be/OPODIS2022/">Conference on Principles of Distributed Systems (OPODIS) 2022</a></li>
+		</ul>
+
+		 <h2 class="section-title">Journals</h2>
+		 <ul  class="content">
+		  <li><a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8858">IEEE Transactions on Dependable and Secure Computing (IEEE TDSC) 2023, (IEEE TDSC) 2024</a></li>
+		  <li><a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206">IEEE Transactions on Information Forensics and Security (IEEE TIFS) 2022</a></li>
+		  <li><a target="_blank"  href = "https://dl.acm.org/journal/tosem">ACM Transactions on Software Engineering and Methodology (IEEE TOSEM)2022 </a></li>
+		  <li><a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4275028">IEEE Transactions on Network and Service Management (IEEE TNSM) 2022 </a></li>
+		  <li><a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=25">IEEE Transactions on Vehicular Technology (IEEE TVT) 2021</a></li>
+		  <li><a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=71">IEEE Transactions on Parallel and Distributed Systems (IEEE TPDS) 2022 </a></li>
+		  <li><a target="_blank"  href = "https://www.sciencedirect.com/journal/future-generation-computer-systems">Future Generation Computer Systems (FGCS) 2020 </a></li>
+		  <li><a target="_blank"  href = "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=52">IEEE Software (IEEE Softw) 2019 </a></li>
+		</ul>
+            
+		<h2 class="section-title">Research Students</h2>
+		<div>
+			I am fortunate to collaborate with these excellent students.
+
+			<!--<h2 class="section-title">Current students</h2> -->
+			<ul  class="content">
+				<li><a href = "" target="_blank">Jingyuan Ding</a> (2024-now) (now master student at <a href = "" target="_blank">Shandong University</a>)</li>
+				<li><a href = "" target="_blank">Kaikai Feng</a> (2023-now) (now PhD student at <a href = "" target="_blank">Shandong University</a>)</li>
+				<li><a href = "" target="_blank">Youheng Wang</a> (2023-now) (now PhD student at <a href = "" target="_blank">Shandong University</a>)</li>
+				<li><a href = "" target="_blank">Mingfei Zhang</a> (2022-now) (now PhD student at <a href = "" target="_blank">Shandong University</a>)</li>
+				<li><a href = "" target="_blank">Si Liu</a> (2021-now) (now lecturer at <a href = "" target="_blank">Zhengzhou Normal University</a>)</li>
+				<li><a href = "" target="_blank">Yuanchao Li</a> (2020-now) (now master student at <a href = "https://www.sustech.edu.cn/en/" target="_blank">Southern University of Science and Technology</a>)</li>
+				<li><a href = "" target="_blank">Xuanwei Hu</a> (2020-now) (now master student at <a href = "https://www.sustech.edu.cn/en/" target="_blank">Southern University of Science and Technology</a>)</li>
+			    <li><a href = "" target="_blank">Xinrui Zhang</a> (2020-now) (now PhD student at <a href = "https://www.sydney.edu.au/" target="_blank">the University of Sydney</a>)</li>
+			</ul>
+
+			<h3>Alumni</h3>
+			<ul  class="content">
+				<li><a href = "" target="_blank">Jiaqi Li</a> (2020-2023) (research engineer at <a href = "https://www.zte.com.cn/global/" target="_blank">ZTE Corporation</a>)</li>
+				<li><a href = "" target="_blank">Jinming Cui</a> (2019-2020) (research engineer at <a href = "https://www.antgroup.com/en" target="_blank">Ant Group</a>)</li>
+				<li><a href = "" target="_blank">Ye Liu</a> (2018-2019) (PhD student at <a href = "https://www.ncl.ac.uk/" target="_blank">University of Newcastle</a>)</li>
+				<li><a href = "https://www.ntnu.edu/employees/shuang.wu" target="_blank">Shuang Wu</a> (2017-2018) (PhD student at <a href = "https://www.ntnu.edu/" target="_blank"> Norwegian University of Science and Technology</a>) </li> 
+			</ul>
+		</div>
+		
+		<h2 class="section-title">Teaching</h2>
+		<div>
+			Teaching assistant(TA) for following courses.
+			<ul  class="content">
+				<li>English for Career Development (2019,S1) with <a href = "https://www.linkedin.com/in/natfergs/" target="_blank">Natalie M. Ferguson</a> </li> 
+				<li>Cryptography and Network Security (2019,S2) with <a href = "https://eee.sustc.edu.cn/p/wangqi/" target="_blank">Dr. Qi Wang</a></li>
+			</ul>
+		</div>
+
+		<h2 class="section-title">Others</h2>
+		<ul  class="content">
+		<li>President, the Postdoctoral Association at the IAS, Tsinghua University. 
+		 11/2023-now
+		 </li>
+
+		<li>Captain, the Postdoctoral Football Club of Tsinghua University. 
+		 10/2024-now
+		</li>
+		</ul>
+            </div>
+
+            <div id="misc-section" class="section">
+             <!-- Philosophy & Research Taste Section -->
+		<div class="philosophy-container">
+		    <div class="philosophy-box">
+		        <h2 class="section-title">Philosophy</h2>
+		        <ul class="content">
+		            <li> A genuine love for knowledge and innovation</li>
+		            <li> <!--Avoid the trap of "comparisonism" and accept oneself , not power or money--></li>
+		            <li> Don't cry over spilled milk </li>
+		            <li> Less is more </li>
+		        </ul>
+		    </div>
+
+		    <div class="philosophy-box">
+		        <h2 class="section-title">Research Taste</h2>
+		        <ul class="content">
+		             <li> Novelty </li>
+		            <li> Potential for significant impact </li>
+		            <li> Real-world problems </li>
+		        </ul>
+		    </div>
+		</div>
+
+		<h2 class="section-title">Slides</h2>
+		<ul  class="content">
+		       <li> 2023/01/05. <a href = "resource/accountable_decryption.pdf" target="_blank">Accountable Decryption made Formal and Practical</a></li>
+			<li> 2023/01/03. <a href = "resource/TEE.pdf" target="_blank">TEE and its Key Management</a></li>
+			<li> 2022/09/16. <a href = "resource/hybrid_consensus_algorithm.pdf" target="_blank">Hybrid Consensus Algorithm</a></li>
+		</ul>
+            </div>
+
+            <!-- Contact -->
+            <div id="contact-section" class="section">
+               <h2 class="section-title">Contact</h2>
+	        <ul  class="content">
+	            <li>Email: cnVqaWEucmVzZWFyY2hAb3V0bG9vay5jb20= <br> (please decode using Base64)</li>
+	            <li>
+				Address (From 2022 to now):<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Institute for Advanced Study  <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tsinghua University <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Haidian District, 100084, Beijing, China<br>
+			</li>
+			<li> Links: <a href="https://github.com/rjgeek" target="_blank">GitHub</a>, <a href="http://ehcoo.com/" target="_blank">Blog</a>, <a href="https://www.linkedin.com/in/rujia-li-1a808912a/" target="_blank">Linkedin</a></li>
+	        </ul>
+            </div>
+        </div>
+</div>
+
+<script>
+       function showSection(sectionId) {
+	    // 隐藏所有 section
+	    document.querySelectorAll('.section').forEach(section => {
+	        section.style.display = 'none';
+	    });
+
+	    // 显示选中的 section
+	    document.getElementById(sectionId).style.display = 'block';
+
+	    // 更新导航栏的选中状态
+	    document.querySelectorAll('.navigation a').forEach(link => {
+	        link.classList.remove('active');
+	    });
+	    event.target.classList.add('active');
+	}
+	
+	document.addEventListener("DOMContentLoaded", function() {
+       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认的跳转行为
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                // 先隐藏所有 section，再显示目标 section
+                document.querySelectorAll('.section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                target.style.display = 'block';
+
+                // 平滑滚动到目标 section
+                window.scrollTo({
+                    top: target.offsetTop - 20,  // 适当调整偏移量，避免导航栏遮挡
+                    behavior: 'smooth'
+                });
+
+                // 更新导航栏选中状态
+                document.querySelectorAll('.navigation a').forEach(link => {
+                    link.classList.remove('active');
+                });
+                document.querySelector(`.navigation a[href="${this.getAttribute('href')}"]`)?.classList.add('active');
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>

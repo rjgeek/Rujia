@@ -1,0 +1,107 @@
+ /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navigation */
+nav {
+    background: #000;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a.active {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f5f5f5;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Research Section */
+.research-topics {
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.research-box {
+    background: white;
+    padding: 20px;
+    border-left: 5px solid #007bff;
+    margin-bottom: 20px;
+}
+
+.research-box h3 {
+    font-size: 1.5rem;
+}
+
+.research-box p {
+    margin-top: 10px;
+}
+
+/* Timeline */
+.timeline {
+    list-style: none;
+    margin: 20px 0;
+    padding-left: 10px;
+}
+
+.timeline li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.timeline .year {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.timeline .title {
+    font-weight: 600;
+}
+
+/* Call to Action */
+.cta {
+    text-align: center;
+    padding: 40px;
+    background: #007bff;
+    color: white;
+}
+
+.cta a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: white;
+}
