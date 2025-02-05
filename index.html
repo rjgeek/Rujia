@@ -29,7 +29,6 @@ var _hmt = _hmt || [];
 </head>
 
 <body>
-
     <div class="container">
         <div class="navigation">
             <img src="./image/rujia_new.png" alt="Profile Image">
@@ -43,8 +42,6 @@ var _hmt = _hmt || [];
         </div>
 
         <div class="main">
-
-            <!-- Home -->
             <div id="home-section" class="section">
                 <h1 class="header-title">Rick Rujia Li</h1>   
                 <p class="content">
@@ -205,8 +202,7 @@ var _hmt = _hmt || [];
 	    </div>
 	</div>
 	
-	<!-- 脚注部分 -->
-		<div class="footnote">
+	<div class="footnote">
 		   <hr>
 		    <small>
 		        [1] <b>The People’s Bank of China (PBOC)</b> is China’s central bank, responsible for the country's monetary policy and financial stability. <br>
@@ -501,27 +497,22 @@ var _hmt = _hmt || [];
 	}
 
 document.addEventListener("DOMContentLoaded", function() {
-    // 遍历所有 `a[href^="#"]` 但不修改 `onclick` 事件的 `<a>` (避免干扰 showSection)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href').substring(1); // 获取 `id`
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                e.preventDefault(); // 只有在找到目标元素时才阻止默认行为
-                
-                // 让目标元素可见 (如果它在其他 section 里，需要切换 section)
+                e.preventDefault(); 
                 if (!targetElement.closest('.section').style.display || targetElement.closest('.section').style.display === 'none') {
                     showSection(targetElement.closest('.section').id);
                 }
 
-                // 平滑滚动到目标元素
                 window.scrollTo({
-                    top: targetElement.offsetTop - 20, // 调整偏移量
+                    top: targetElement.offsetTop - 20, 
                     behavior: 'smooth'
                 });
 
-                // 更新导航栏选中状态
                 document.querySelectorAll('.navigation a').forEach(link => {
                     link.classList.remove('active');
                 });
@@ -530,7 +521,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
 </script>
 
 </body>
