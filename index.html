@@ -62,8 +62,8 @@ var _hmt = _hmt || [];
              My research focuses on <b><a href="javascript:void(0);" onclick="showSection('research-section')">Privacy-Preserving Smart Contracts (PPSCs)</a></b>, with a particular emphasis on 
              improving the (economic-level and system-level) security of consensus algorithms and privacy-preserving technologies that underpin the design and implementation of PPSCs.
              <ul class="sub-category">
-                <li>Hybrid consensus algorithm (GHOST + BFT) <sup><a href="#footnote">[1]</a></sup></li>
-                <li>Hybrid privacy-preserving technology (TEE<sup><a href="#footnote">[2]</a></sup> + cryptographic primitives<sup><a href="#footnote">[3]</a></sup>)</li>
+                <li>Hybrid consensus algorithm (GHOST + BFT) <sup><a href="#footnote1">[1]</a></sup></li>
+                <li>Hybrid privacy-preserving technology (TEE<sup><a href="#footnote1">[2]</a></sup> + cryptographic primitives<sup><a href="#footnote1">[3]</a></sup>)</li>
             </ul>
             </div>
 
@@ -89,7 +89,7 @@ var _hmt = _hmt || [];
             <div class="more-link"><a href="news.html">More News</a></div>
             
              <hr>
-             <div class="footnote" id = "footnote">
+             <div class="footnote1" id = "footnote1">
 		    <small>
 		        [1] <b>Hybrid Consensus Algorithm</b> integrates multiple distinct consensus models, typically combining Greedy Heaviest-Observed Sub-Tree (GHOST) -type longest chain rules with Byzantine Fault Tolerance (BFT)  voting-based protocols, to enhance security and finality while mitigating the limitations of individual consensus mechanisms. <br>
 		        [2] <b>TEE (Trusted Execution Environment) </b> is a secure enclave within a processor that enables confidential computation. <br>
@@ -124,7 +124,7 @@ var _hmt = _hmt || [];
 
                 <ul class="timeline">
                     <li>
-                        <span class="year">2024</span>
+                        <span class="year">2025</span>
                         <span class="title">PoS Attack Remediation</span> (<i>USENIX Security'25</i>)
                     </li>
                     <li>
@@ -152,9 +152,13 @@ var _hmt = _hmt || [];
                 <p>Integrating Trusted Execution Environment (TEE) with cryptographic techniques to enhance smart contract privacy.</p>
               
                 <ul class="timeline">
+                     <li>
+                        <span class="year">2025</span>
+                        <span class="title">Making TEE more Secure </span>  (<i>Ongoing Work</i>)
+                    </li>
                     <li>
                         <span class="year">2024</span>
-                        <span class="title">TEE + MPC </span>  (<i>Ongoing Work</i>)
+                        <span class="title">Practical Multi-party Computation using TEEs </span>  (<i>Ongoing Work</i>)
                     </li>
                      <li>
                         <span class="year">2023</span>
@@ -240,7 +244,7 @@ var _hmt = _hmt || [];
     <h2 id="honours" class="section-title">Honours/Certification</h2>
     <div class="biography-grid">
         <ul class="biography-list">
-            <li>Shuimu Tsinghua Scholar, <a href="https://www.tsinghua.edu.cn/en/info/1245/5132.htm">Tsinghua University</a> (2023-2024)</li>
+            <li>Shuimu Tsinghua Scholar, <a href="https://www.tsinghua.edu.cn/en/info/1245/5132.htm">Tsinghua University</a> (2023 — 2024)</li>
             <li>ITIC People's Choice Awards 2017, <a href="https://blog.bham.ac.uk/itnews/2017/05/05/it-services-innovation-centre-emerging-technology-competition-2017-winners-announced/" target="_blank">ITIC Committee</a> (05/2017)</li>
         </ul>
         <ul class="biography-list">
@@ -362,7 +366,7 @@ var _hmt = _hmt || [];
             
 		<h2 class="section-title">Research Students</h2>
 		<div>
-			I am fortunate to collaborate with these excellent students.
+			I am fortunate to collaborate with these excellent students. 
 			<ul  class="content">
 				<li><a href = "" target="_blank">Jingyuan Ding</a> (2024-now) (now master student at <a href = "" target="_blank">Shandong University</a>)</li>
 				<li><a href = "" target="_blank">Kaikai Feng</a> (2023-now) (now PhD student at <a href = "" target="_blank">Shandong University</a>)</li>
@@ -420,7 +424,7 @@ var _hmt = _hmt || [];
 		    <div class="philosophy-box">
 		        <h2 class="section-title">Research Taste</h2>
 		        <ul class="content">
-		             <li> Novelty </li>
+		            <li> Novelty </li>
 		            <li> Potential for significant impact </li>
 		            <li> Real-world problems </li>
 		        </ul>
@@ -496,34 +500,37 @@ var _hmt = _hmt || [];
         }
 	}
 
-	document.addEventListener("DOMContentLoaded", function() {
-    // Add event listeners for anchor links with href starting with '#'
+document.addEventListener("DOMContentLoaded", function() {
+    // 遍历所有 `a[href^="#"]` 但不修改 `onclick` 事件的 `<a>` (避免干扰 showSection)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent default anchor behavior
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                // Hide all sections and show the target section
-                document.querySelectorAll('.section').forEach(section => {
-                    section.style.display = 'none';
-                });
-                target.style.display = 'block';
+            const targetId = this.getAttribute('href').substring(1); // 获取 `id`
+            const targetElement = document.getElementById(targetId);
 
-                // Smooth scroll to the target section
+            if (targetElement) {
+                e.preventDefault(); // 只有在找到目标元素时才阻止默认行为
+                
+                // 让目标元素可见 (如果它在其他 section 里，需要切换 section)
+                if (!targetElement.closest('.section').style.display || targetElement.closest('.section').style.display === 'none') {
+                    showSection(targetElement.closest('.section').id);
+                }
+
+                // 平滑滚动到目标元素
                 window.scrollTo({
-                    top: target.offsetTop - 20,  // Adjust for navigation bar offset
+                    top: targetElement.offsetTop - 20, // 调整偏移量
                     behavior: 'smooth'
                 });
 
-                // Update the active state in the navigation
+                // 更新导航栏选中状态
                 document.querySelectorAll('.navigation a').forEach(link => {
                     link.classList.remove('active');
                 });
-                document.querySelector(`.navigation a[href="${this.getAttribute('href')}"]`)?.classList.add('active');
+                document.querySelector(`.navigation a[href="#${targetId}"]`)?.classList.add('active');
             }
         });
     });
 });
+
 </script>
 
 </body>
