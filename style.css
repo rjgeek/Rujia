@@ -1,5 +1,3 @@
- 
-   <style>
         .section {
             display: none;
         }
@@ -431,3 +429,60 @@
         display: inline-block; /* 让导航项横排 */
     }
 }
+
+       .timeline1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            padding: 20px 0;
+            /**width: 45.67vw;**/
+            margin: auto;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .timeline1::before {
+            content: "";
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #000;
+        }
+        
+        .event {
+            text-align: center;
+            position: relative;
+            flex-shrink: 0;
+            margin: 0 6px;
+        }
+        .event div {
+            font-size: 12px;
+            margin-bottom: 8px;
+            display: inline-block;
+            padding: 4px 6px;
+            max-width: 110px;
+            word-wrap: break-word;
+        }
+        .education {
+            background-color: #f4d03f;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .time-label {
+            font-size: 10px;
+            color: #333;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .timeline1 {
+                display: none;
+            }
+        }
+
