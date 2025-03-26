@@ -4,6 +4,9 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+       <script src="jquery-3.7.1.slim.js" </script>
+       
       <script>
          var _hmt = _hmt || [];
          (function() {
@@ -11,8 +14,9 @@
            hm.src = "https://hm.baidu.com/hm.js?a42ff828be08629978dc2c65bc1da154";
            var s = document.getElementsByTagName("script")[0]; 
            s.parentNode.insertBefore(hm, s);
-         })();
+         })();   
       </script>
+      
       <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
       <meta name="description" content="Dr. Rujia Li is a Postdoctoral Fellow at Tsinghua University. His research focuses on privacy-preserving smart contracts, blockchain security, and cryptographic protocols.">
       <meta name="keywords" content="Rujia Li, Blockchain Security, Privacy-Preserving Smart Contracts, Cryptography, TEE, Consensus Protocols">
@@ -26,14 +30,14 @@
    <body>
       <div class="container">
          <div class="navigation">
-            <img src="./image/rujia_new.png" loading="lazy" alt="Profile Image">
-            <a onclick="showSection('home-section')">Home</a>
-            <a onclick="showSection('research-section')">Research</a>
-            <a onclick="showSection('publication-section')">Publication</a>
-            <a onclick="showSection('biography-section')">Biography</a>
-            <a onclick="showSection('service-section')">Service</a>
-            <a onclick="showSection('misc-section')">Misc</a>
-            <a onclick="showSection('contact-section')">Contact</a>
+            <img src="./image/rujia_new.png" loading="lazy" alt="Profile Image">            
+            <a href="#home-section" data-section="home-section">Home</a>
+           <a href="#research-section" data-section="research-section">Research</a>
+           <a href="#publication-section" data-section="publication-section">Publication</a>
+           <a href="#biography-section" data-section="biography-section">Biography</a>
+           <a href="#service-section" data-section="service-section">Service</a>
+            <a href="#misc-section" data-section="misc-section">Misc</a>
+           <a href="#contact-section" data-section="contact-section">Contact</a>
          </div>
          <div class="main">
             <div id="home-section" class="section">
@@ -456,48 +460,74 @@ He received his Ph.D. in Computer Science from the <a href = "https://www.birmin
          </div>
       </div>
       <script>
-         function showSection(sectionId) {
+         // Function to show the selected section
+function showSection(sectionId) {
+    // Hide all sections
+    $('.section').hide();
 
-         document.querySelectorAll('.section').forEach(section => {
-            section.style.display = 'none';
-         });
-         
-         // Show the selected section
-         const section = document.getElementById(sectionId);
-         if (section) {
-             section.style.display = 'block';
-         }
-         
-         // Remove "active" class from all navigation links
-         document.querySelectorAll('.navigation a').forEach(link => {
-             link.classList.remove('active');
-         });
-         
-         // Add "active" class to the correct navigation link
-         document.querySelectorAll('.navigation a').forEach(link => {
-             if (link.getAttribute("onclick") == `showSection('${sectionId}')`) {
-                console.log("Hello world!");
-                 link.classList.add('active');
-             }
-         });
-         
-         // If the Research section is selected, load the GIF dynamically
-         if (sectionId == 'research-section') {
-            const gifContainer = document.getElementById('pps-gif-section');
-	         if (!gifContainer.querySelector("img")) {
-	                var htmlContent = `
-	                    <div class="gif-container">
-	                        <img src="image/industry/ppsc1.gif" alt="PPSCs Introduction">
-	                    </div>
-	                `; 
-	                gifContainer.innerHTML = htmlContent;  // Append the HTML content to the container
-	            }
-         }
-         }
-       
-         document.addEventListener("DOMContentLoaded", function() {
-          showSection('home-section');
-         });
+    // Show the selected section
+    const section = $('#' + sectionId);
+    if (section.length) {
+        section.show();
+    }
+
+    // Remove "active" class from all navigation links
+    $('.navigation a').removeClass('active');
+
+    // Add "active" class to the correct navigation link
+    const activeLink = $('.navigation a[data-section="' + sectionId + '"]');
+    if (activeLink.length) {
+        activeLink.addClass('active');
+    }
+
+    // If the Research section is selected, load the GIF dynamically
+    if (sectionId === 'research-section') {
+        loadResearchGif();
+    }
+}
+
+// Function to dynamically load the research GIF
+function loadResearchGif() {
+    const gifContainer = $('#pps-gif-section');
+
+    // Only load the GIF if it hasn't been loaded already
+    if (gifContainer.find("img").length === 0) {
+        const htmlContent = `
+            <div class="gif-container">
+                <img src="image/industry/ppsc1.gif" alt="PPSCs Introduction">
+            </div>
+        `;
+        gifContainer.html(htmlContent);
+    }
+}
+
+// Initialize the page by showing the default section (e.g., home-section)
+$(document).ready(function() {
+    // Show the default section (e.g., home-section)
+    showSection('home-section');
+
+    // Handle navigation link clicks
+    $('a[href^="#"]').on('click', function(e) {
+        const targetId = $(this).attr('href').substring(1); // Extract the section ID
+        const targetElement = $('#' + targetId);
+
+        if (targetElement.length) {
+            e.preventDefault(); // Prevent default anchor behavior
+
+            // Show the corresponding section
+            showSection(targetElement.closest('.section').attr('id'));
+
+            // Smooth scroll to the section
+           function smoothScroll(targetElement) {
+		    window.scrollTo({
+		        top: targetElement.offsetTop - 20, // Adjust to your needs
+		        behavior: 'smooth' // This ensures smooth scrolling
+		    });
+		}
+        }
+    });
+});
+
       </script>
    </body>
 </html>
