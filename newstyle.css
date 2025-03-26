@@ -58,17 +58,13 @@
             cursor: pointer;
         }
   
-	.navigation a.active {
-	    background: #1a1a1a;
-	    font-weight: bold;
-	    border-left: 4px solid #007bff;
-	    padding-left: 12px;
-	    color: #007bff;
-	}
-        .navigation a:hover {
-            background: #333333;
-        }
-       
+      .navigation a.active {
+	    background: #1a1a1a !important;
+	    font-weight: bold !important;
+	    border-left: 4px solid #007bff !important;
+	    padding-left: 12px !important;
+	    color: #007bff !important;
+	}   
 	.navigation a:hover {
 	    background: #0056b3;
 	}
