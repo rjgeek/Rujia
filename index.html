@@ -482,48 +482,20 @@ He received his Ph.D. in Computer Science from the <a href = "https://www.birmin
          
          // If the Research section is selected, load the GIF dynamically
          if (sectionId === 'research-section') {
-             loadResearchGif();
+            const gifContainer = document.getElementById('pps-gif-section');
+	         if (!gifContainer.querySelector("img")) {
+	                var htmlContent = `
+	                    <div class="gif-container">
+	                        <img src="image/industry/ppsc1.gif" alt="PPSCs Introduction">
+	                    </div>
+	                `; 
+	                gifContainer.innerHTML = htmlContent;  // Append the HTML content to the container
+	            }
          }
          }
-        
-         function loadResearchGif() {
-         const gifContainer = document.getElementById('pps-gif-section');
-         
-         if (!gifContainer.querySelector("img")) {
-                var htmlContent = `
-                    <div class="gif-container">
-                        <img src="image/industry/ppsc1.gif" alt="PPSCs Introduction">
-                    </div>
-                `; 
-                gifContainer.innerHTML = htmlContent;  // Append the HTML content to the container
-            }
-         }
-         
+       
          document.addEventListener("DOMContentLoaded", function() {
           showSection('home-section');
-         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href').substring(1); // 获取 `id`
-                const targetElement = document.getElementById(targetId);
-         
-                if (targetElement) {
-                    e.preventDefault(); 
-                    if (!targetElement.closest('.section').style.display || targetElement.closest('.section').style.display === 'none') {
-                        showSection(targetElement.closest('.section').id);
-                    }
-      
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 20, 
-                        behavior: 'smooth'
-                    });
-         
-                    document.querySelectorAll('.navigation a').forEach(link => {
-                        link.classList.remove('active');
-                    });
-                    document.querySelector(`.navigation a[href="#${targetId}"]`)?.classList.add('active');
-                }
-            });
-         });
          });
       </script>
    </body>
