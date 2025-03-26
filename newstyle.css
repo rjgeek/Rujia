@@ -68,14 +68,6 @@
         .navigation a:hover {
             background: #333333;
         }
-
-        .navigation a.active {
-            background: #1a1a1a;
-            font-weight: bold;
-            border-left: 4px solid #007bff;
-            padding-left: 12px;
-            color: #007bff;
-        }
        
 	.navigation a:hover {
 	    background: #0056b3;
