@@ -475,13 +475,14 @@ He received his Ph.D. in Computer Science from the <a href = "https://www.birmin
          
          // Add "active" class to the correct navigation link
          document.querySelectorAll('.navigation a').forEach(link => {
-             if (link.getAttribute("onclick") === `showSection('${sectionId}')`) {
+             if (link.getAttribute("onclick") == `showSection('${sectionId}')`) {
+                console.log("Hello world!");
                  link.classList.add('active');
              }
          });
          
          // If the Research section is selected, load the GIF dynamically
-         if (sectionId === 'research-section') {
+         if (sectionId == 'research-section') {
             const gifContainer = document.getElementById('pps-gif-section');
 	         if (!gifContainer.querySelector("img")) {
 	                var htmlContent = `
