@@ -73,7 +73,7 @@
             flex: 1;
             padding: 50px;
             margin-left: 250px;
-            max-width: 900px;
+            max-width: 1050px;
             overflow-y: auto;
         }
         
@@ -253,7 +253,20 @@
 	    margin-top: 40px;
 	   
 	}
+.box {
+  margin-top: 20px;
+  background-color: #ffffff;
+  border: 1px solid #3f51b5;
+  border-radius: 8px;
+  padding: 1px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+}
 
+.box-content {
+  padding: 1px;
+  color: #333333;
+  background-color: #f7f9fc;
+}
 	.logo-grid {
 	     display: grid;
 	    grid-template-columns: repeat(3, 1fr); 
@@ -473,4 +486,3 @@
                 display: none;
             }
         }  
-
