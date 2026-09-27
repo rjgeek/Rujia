@@ -488,7 +488,62 @@
         }  
 
 
+.profile-header {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.profile-name {
+    font-size: 38px;
+    font-weight: 800;
+    color: #111111; 
+    margin: 0 0 10px 0;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.profile-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333; 
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+}
+
+.title-note {
+    font-weight: 400;
+    color: #777777; 
+    font-size: 16px;
+}
+
+.profile-affiliation {
+    font-size: 16px;
+    color: #666666; 
+    margin: 0;
+    line-height: 1.5;
+}
 
 
+
+.main .content a,
+.main .research-topics a,
+.main .research-topics li a,
+.main .research-box p a,
+.main ul.content a {
+    color: #2c5e8e; 
+    text-decoration: none; 
+    border-bottom: 1px dashed #9bb7d4; 
+    transition: all 0.2s ease;
+}
+
+
+.main .content a:hover,
+.main .research-topics a:hover,
+.main .research-topics li a:hover,
+.main .research-box p a:hover,
+.main ul.content a:hover {
+    color: #005ebf; 
+    border-bottom: 1px solid #005ebf;
+}
 
 
