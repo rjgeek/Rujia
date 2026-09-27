@@ -14,7 +14,7 @@
 
         html, body {
             font-family: 'Roboto', sans-serif;
-            background: #ffffff;
+            background: #fdfbf6;
             color: #333333;
             font-size: 16px;
             line-height: 1.6;
@@ -30,7 +30,7 @@
         .navigation {
             width: 250px;
             min-height: 100vh;
-            background: #000;
+            background: #1E293B ;
             padding: 20px;
             color: #ffffff;
             display: flex;
@@ -189,7 +189,7 @@
 	.hero {
 	    text-align: center;
 	    padding: 10px 10px;
-	    background: #f5f5f5;
+	   
 	}
 
 	.hero p {
@@ -199,7 +199,7 @@
 
 	.research-box {
 	    background: #ffffff;
-	    border: 2px solid #007bff; 
+	    border: 0px solid #007bff; 
 	    border-radius: 8px;
 	    padding: 20px;
 	    margin-bottom: 20px;
@@ -409,7 +409,7 @@
         min-height: 10vh;
         top: 0;
         left: 0;
-        background: #000; /* 统一背景 */
+        background: #1E293B; /* 统一背景 */
         display: flex;
         /*flex-direction: column;  两行布局 */
         align-items: center; /* 居中 */
@@ -486,3 +486,9 @@
                 display: none;
             }
         }  
+
+
+
+
+
+
