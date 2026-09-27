@@ -537,6 +537,13 @@
 }
 
 
+.profile-affiliation a {
+    color: #2c5e8e; 
+    text-decoration: none; 
+    border-bottom: 1px dashed #9bb7d4; 
+    transition: all 0.2s ease;
+}
+
 .main .content a:hover,
 .main .research-topics a:hover,
 .main .research-topics li a:hover,
