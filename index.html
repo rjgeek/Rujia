@@ -61,12 +61,13 @@ He received his Ph.D. in Computer Science from the University of Birmingham (joi
                <h2 id="research" class="section-title">Research Interests</h2>
                <div class="research-topics">
                
-His research combines applied cryptography and cryptoeconomics, with a focus on the security and incentive foundations of <a href="javascript:void(0);" onclick="showSection('research-section')">
-real-world decentralized systems</a>, specifically:
+His research combines applied cryptography and cryptoeconomics, focusing on the security and incentive 
+foundations of <a href="javascript:void(0);" onclick="showSection('research-section')">large-scale decentralized systems</a>. Specifically, his work spans:
 
 <ul class="sub-category">
-  <li>Analyzing blockchain consensus under rational and adversarial behavior;</li>
-  <li>Designing cryptographic protocols and incentive mechanisms for secure and privacy-preserving decentralized systems.</li>
+  <li>Analyzing decentralized protocols with rational participants under economic incentives;</li>
+  <li>Building automated tools for systematic security and incentive analysis under rational deviations;</li>
+  <li>Designing cryptographic protocols to secure systems against rational deviations.</li>
 </ul>
 
 <p>
@@ -150,40 +151,331 @@ supports privacy-preserving technologies for large-scale financial infrastructur
 
                <div class="footer">Last updated, September 22 2026, Rujia Li</div>
             </div>
+            
+            
             <!-- Research -->
             <div id="research-section" class="section">
                <h1 class="header-title">Research</h1>
                
               <section class="research-topics">
                   <div>
-                     <p> 
+                   
                
-               Rujia Li works on applied cryptography and cryptoeconomics, with a focus 
-on the security and incentive properties of real-world decentralized 
-systems. His research spans two directions: formal analysis of safety, 
-liveness, and incentive violations in deployed consensus protocols under 
-rational and adversarial behavior, and the design of cryptographic 
-protocols that achieve privacy, accountability, and incentive 
-compatibility without trusted third parties.
+ Rujia Li aims to establish a unified formal foundation for analyzing the security and privacy of large-scale cryptographic systems under economic incentives. 
+ His research addresses one fundamental question: <b><i> Can protocols remain secure and private when participants deviate due to economic incentives? If not, how should they be redesigned? </i></b>
+ His work spans three directions: security analysis, automated tool design, and cryptographic protocol design.
 
-                     </p>
                      <br>
                   </div>
                </section>
                
                <section class="hero">
-                  <div class="pps-gif-section" id="pps-gif-section">
-                  </div><br>
-                   Fig-1: decentralized system architecture
+               <div class="stage">
+<svg viewBox="0 0 1080 780" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hand-drawn research overview">
+
+  <defs>
+    <!-- hand-drawn-ish filter: slight wobble -->
+    <filter id="wobble" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <!-- paper texture -->
+    <pattern id="paper" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="#fdfbf5"/>
+      <circle cx="2" cy="2" r="0.35" fill="#e9e2d0"/>
+      <circle cx="5" cy="4" r="0.3" fill="#efe8d6"/>
+    </pattern>
+
+    <!-- soft pastel fills -->
+    <linearGradient id="gIndigo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e5e7ff"/>
+      <stop offset="100%" stop-color="#d8dcff"/>
+    </linearGradient>
+    <linearGradient id="gTeal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d9fbf5"/>
+      <stop offset="100%" stop-color="#c7f5ee"/>
+    </linearGradient>
+    <linearGradient id="gAmber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff1d6"/>
+      <stop offset="100%" stop-color="#ffe4b3"/>
+    </linearGradient>
+    <linearGradient id="gPink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffe1ef"/>
+      <stop offset="100%" stop-color="#ffd0e4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background paper -->
+  <rect width="1080" height="780" fill="url(#paper)"/>
+
+  <!-- ============ TITLE ============ -->
+  <g filter="url(#wobble)" transform="translate(540,60)">
+    <text text-anchor="middle" font-size="34" font-weight="700" fill="#2b2b2b"
+          font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">
+      Research Overview
+    </text>
+    <text text-anchor="middle" y="30" font-size="16" fill="#7a6f5c"
+          font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">
+      Rujia Li · Applied Cryptography &amp; Cryptoeconomics
+    </text>
+  </g>
+
+  <!-- ============ HERO BUBBLE (core question) ============ -->
+  <g transform="translate(540,170)">
+    <!-- speech bubble body -->
+    <path d="M -420 -70
+             Q -430 -90 -410 -95
+             L 410 -95
+             Q 440 -95 440 -60
+             L 440 40
+             Q 440 75 410 75
+             L -50 75
+             L -80 110
+             L -80 75
+             L -410 75
+             Q -440 75 -440 40
+             L -440 -60
+             Q -440 -90 -420 -70 Z"
+          fill="#fffef7" stroke="#2b2b2b" stroke-width="3"
+          stroke-linejoin="round" stroke-linecap="round"
+          filter="url(#wobble)"/>
+
+    <text text-anchor="middle" y="-25" font-size="20" font-weight="700" fill="#2b2b2b"
+          font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">
+      Can protocols remain secure and private
+    </text>
+    <text text-anchor="middle" y="2" font-size="20" font-weight="700" fill="#2b2b2b"
+          font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">
+      when participants deviate due to
+      <tspan fill="#c2410c">economic incentives</tspan>?
+    </text>
+    <text text-anchor="middle" y="42" font-size="18" fill="#4b5563"
+          font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">
+      If not, how should they be redesigned?
+    </text>
+
+    <!-- small badge -->
+    <g transform="translate(-370,-70)">
+      <rect x="-10" y="-16" width="180" height="30" rx="15"
+            fill="#6366f1" opacity="0.95"/>
+      <text x="80" y="4" text-anchor="middle" font-size="13" font-weight="700" fill="#fff"
+            font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">
+        Rational Deviations
+      </text>
+    </g>
+
+    <!-- cute magnifier character -->
+    <g transform="translate(390,-105)">
+      <circle cx="0" cy="0" r="26" fill="#ffe4b3" stroke="#2b2b2b" stroke-width="3"/>
+      <circle cx="-8" cy="-4" r="3" fill="#2b2b2b"/>
+      <circle cx="8" cy="-4" r="3" fill="#2b2b2b"/>
+      <path d="M -8 8 Q 0 14 8 8" stroke="#2b2b2b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="0" cy="-16" r="4" fill="#ec4899"/>
+    </g>
+  </g>
+
+  <!-- ============ ARROW DOWN ============ -->
+  <g filter="url(#wobble)">
+    <path d="M 540 300 L 540 330" stroke="#2b2b2b" stroke-width="3"
+          stroke-linecap="round" fill="none"/>
+    <path d="M 530 322 L 540 336 L 550 322" stroke="#2b2b2b" stroke-width="3"
+          fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- ============ THREE CARDS ============ -->
+  <!-- Card 1 -->
+  <g transform="translate(60,360)">
+    <rect width="300" height="230" rx="26" ry="26"
+          fill="url(#gIndigo)" stroke="#2b2b2b" stroke-width="3"
+          filter="url(#wobble)"/>
+    <!-- number bubble -->
+    <circle cx="42" cy="42" r="20" fill="#6366f1" stroke="#2b2b2b" stroke-width="2.5"/>
+    <text x="42" y="49" text-anchor="middle" font-size="20" font-weight="700" fill="#fff"
+          font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">1</text>
+
+    <!-- magnifier icon -->
+    <g transform="translate(230,40)">
+      <circle cx="0" cy="0" r="18" fill="#fffef7" stroke="#2b2b2b" stroke-width="3"/>
+      <line x1="12" y1="12" x2="22" y2="22" stroke="#2b2b2b" stroke-width="3.5" stroke-linecap="round"/>
+      <circle cx="-5" cy="-4" r="2.5" fill="#2b2b2b"/>
+      <path d="M -8 4 Q 0 10 8 4" stroke="#2b2b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <text x="30" y="105" font-size="18" font-weight="700" fill="#2b2b2b"
+          font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">
+      Security Analysis
+    </text>
+
+    <foreignObject x="30" y="120" width="250" height="90">
+      <div xmlns="http://www.w3.org/1999/xhtml"
+           style="font-family:'Comic Sans MS','Chalkboard SE','Segoe UI',sans-serif;
+                  font-size:13px; line-height:1.5; color:#4b5563;">
+        Proving impossibility results and demonstrating insecurity for decentralized protocols with rational participants under economic incentives.
+      </div>
+    </foreignObject>
+
+    <!-- chips -->
+    <g font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif" font-size="11">
+      <rect x="30" y="196" width="72" height="22" rx="11" fill="#fffef7" stroke="#2b2b2b" stroke-width="2"/>
+      <text x="66" y="211" text-anchor="middle" fill="#4338ca" font-weight="700">Impossibility</text>
+      <rect x="110" y="196" width="72" height="22" rx="11" fill="#fffef7" stroke="#2b2b2b" stroke-width="2"/>
+      <text x="146" y="211" text-anchor="middle" fill="#4338ca" font-weight="700">Consensus</text>
+    </g>
+  </g>
+
+  <!-- Card 2 -->
+  <g transform="translate(390,360)">
+    <rect width="300" height="230" rx="26" ry="26"
+          fill="url(#gTeal)" stroke="#2b2b2b" stroke-width="3"
+          filter="url(#wobble)"/>
+    <circle cx="42" cy="42" r="20" fill="#06b6d4" stroke="#2b2b2b" stroke-width="2.5"/>
+    <text x="42" y="49" text-anchor="middle" font-size="20" font-weight="700" fill="#fff"
+          font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">2</text>
+
+    <!-- wrench + gear icon -->
+    <g transform="translate(232,40)">
+      <circle cx="0" cy="0" r="16" fill="#fffef7" stroke="#2b2b2b" stroke-width="3"/>
+      <circle cx="0" cy="0" r="5" fill="#2b2b2b"/>
+      <g stroke="#2b2b2b" stroke-width="3" stroke-linecap="round">
+        <line x1="0" y1="-16" x2="0" y2="-22"/>
+        <line x1="0" y1="16" x2="0" y2="22"/>
+        <line x1="-16" y1="0" x2="-22" y2="0"/>
+        <line x1="16" y1="0" x2="22" y2="0"/>
+      </g>
+      <path d="M 20 18 L 30 28" stroke="#2b2b2b" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <text x="30" y="105" font-size="18" font-weight="700" fill="#2b2b2b"
+          font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">
+      Automated Tool Design
+    </text>
+
+    <foreignObject x="30" y="120" width="250" height="90">
+      <div xmlns="http://www.w3.org/1999/xhtml"
+           style="font-family:'Comic Sans MS','Chalkboard SE','Segoe UI',sans-serif;
+                  font-size:13px; line-height:1.5; color:#4b5563;">
+        Designing automated and semi-automated tools that scale the analysis of security and incentives under incentive-driven rational deviations.
+      </div>
+    </foreignObject>
+
+    <g font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif" font-size="11">
+      <rect x="30" y="196" width="82" height="22" rx="11" fill="#fffef7" stroke="#2b2b2b" stroke-width="2"/>
+      <text x="71" y="211" text-anchor="middle" fill="#0e7490" font-weight="700">Failure Inj.</text>
+      <rect x="120" y="196" width="82" height="22" rx="11" fill="#fffef7" stroke="#2b2b2b" stroke-width="2"/>
+      <text x="161" y="211" text-anchor="middle" fill="#0e7490" font-weight="700">RL Optim.</text>
+    </g>
+  </g>
+
+  <!-- Card 3 -->
+  <g transform="translate(720,360)">
+    <rect width="300" height="230" rx="26" ry="26"
+          fill="url(#gAmber)" stroke="#2b2b2b" stroke-width="3"
+          filter="url(#wobble)"/>
+    <circle cx="42" cy="42" r="20" fill="#f59e0b" stroke="#2b2b2b" stroke-width="2.5"/>
+    <text x="42" y="49" text-anchor="middle" font-size="20" font-weight="700" fill="#fff"
+          font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">3</text>
+
+    <!-- lock icon -->
+    <g transform="translate(230,42)">
+      <rect x="-14" y="-4" width="28" height="22" rx="5"
+            fill="#fffef7" stroke="#2b2b2b" stroke-width="3"/>
+      <path d="M -8 -4 V -12 A 8 8 0 0 1 8 -12 V -4"
+            fill="none" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="0" cy="6" r="2.5" fill="#2b2b2b"/>
+    </g>
+
+    <text x="30" y="105" font-size="18" font-weight="700" fill="#2b2b2b"
+          font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">
+      Crypto Protocol Design
+    </text>
+
+    <foreignObject x="30" y="120" width="250" height="90">
+      <div xmlns="http://www.w3.org/1999/xhtml"
+           style="font-family:'Comic Sans MS','Chalkboard SE','Segoe UI',sans-serif;
+                  font-size:13px; line-height:1.5; color:#4b5563;">
+        Designing incentive-secure primitives and protocols integrating TEE, MPC, and ZKP to build secure, privacy-preserving systems.
+      </div>
+    </foreignObject>
+
+    <g font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif" font-size="11">
+      <rect x="30" y="196" width="52" height="22" rx="11" fill="#fffef7" stroke="#2b2b2b" stroke-width="2"/>
+      <text x="56" y="211" text-anchor="middle" fill="#b45309" font-weight="700">TEE</text>
+      <rect x="90" y="196" width="52" height="22" rx="11" fill="#fffef7" stroke="#2b2b2b" stroke-width="2"/>
+      <text x="116" y="211" text-anchor="middle" fill="#b45309" font-weight="700">MPC</text>
+      <rect x="150" y="196" width="52" height="22" rx="11" fill="#fffef7" stroke="#2b2b2b" stroke-width="2"/>
+      <text x="176" y="211" text-anchor="middle" fill="#b45309" font-weight="700">ZKP</text>
+    </g>
+  </g>
+
+  <!-- ============ ARROWS DOWN ============ -->
+  <g filter="url(#wobble)" stroke="#2b2b2b" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M 210 610 L 210 640"/>
+    <path d="M 200 632 L 210 646 L 220 632"/>
+    <path d="M 540 610 L 540 640"/>
+    <path d="M 530 632 L 540 646 L 550 632"/>
+    <path d="M 870 610 L 870 640"/>
+    <path d="M 860 632 L 870 646 L 880 632"/>
+  </g>
+
+  <!-- ============ BOTTOM: CUTE CHARACTERS ============ -->
+  <g transform="translate(120,715)" filter="url(#wobble)">
+    <!-- bunny -->
+    <ellipse cx="0" cy="0" rx="26" ry="24" fill="#ffe1ef" stroke="#2b2b2b" stroke-width="3"/>
+    <ellipse cx="-10" cy="-34" rx="7" ry="16" fill="#ffe1ef" stroke="#2b2b2b" stroke-width="3"/>
+    <ellipse cx="10" cy="-34" rx="7" ry="16" fill="#ffe1ef" stroke="#2b2b2b" stroke-width="3"/>
+    <circle cx="-8" cy="-2" r="2.5" fill="#2b2b2b"/>
+    <circle cx="8" cy="-2" r="2.5" fill="#2b2b2b"/>
+    <path d="M -5 8 Q 0 13 5 8" stroke="#2b2b2b" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <text x="0" y="42" text-anchor="middle" font-size="12" fill="#7a6f5c"
+          font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">Analyze</text>
+  </g>
+
+  <g transform="translate(540,715)" filter="url(#wobble)">
+    <!-- robot -->
+    <rect x="-26" y="-22" width="52" height="44" rx="10" fill="#d9fbf5" stroke="#2b2b2b" stroke-width="3"/>
+    <line x1="0" y1="-22" x2="0" y2="-36" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="-40" r="5" fill="#ec4899" stroke="#2b2b2b" stroke-width="2.5"/>
+    <circle cx="-9" cy="-4" r="3" fill="#2b2b2b"/>
+    <circle cx="9" cy="-4" r="3" fill="#2b2b2b"/>
+    <rect x="-9" y="6" width="18" height="4" rx="2" fill="#2b2b2b"/>
+    <text x="0" y="42" text-anchor="middle" font-size="12" fill="#7a6f5c"
+          font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">Automate</text>
+  </g>
+
+  <g transform="translate(960,715)" filter="url(#wobble)">
+    <!-- fox -->
+    <path d="M -24 6 Q -26 -18 0 -20 Q 26 -18 24 6 Q 20 24 0 26 Q -20 24 -24 6 Z"
+          fill="#fff1d6" stroke="#2b2b2b" stroke-width="3"/>
+    <path d="M -20 -18 L -26 -32 L -10 -22 Z" fill="#fff1d6" stroke="#2b2b2b" stroke-width="3"/>
+    <path d="M 20 -18 L 26 -32 L 10 -22 Z" fill="#fff1d6" stroke="#2b2b2b" stroke-width="3"/>
+    <circle cx="-8" cy="-2" r="2.5" fill="#2b2b2b"/>
+    <circle cx="8" cy="-2" r="2.5" fill="#2b2b2b"/>
+    <path d="M -4 8 Q 0 12 4 8" stroke="#2b2b2b" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <text x="0" y="42" text-anchor="middle" font-size="12" fill="#7a6f5c"
+          font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">Design</text>
+  </g>
+
+  <!-- ============ FOOTER ============ -->
+  <text x="540" y="770" text-anchor="middle" font-size="13" fill="#a89a80"
+        font-family="Comic Sans MS, Chalkboard SE, Segoe UI, sans-serif">
+    Security &amp; Privacy under Rational Deviations
+  </text>
+
+</svg>
+</div>
                </section>
              
-               <h2 class="section-title">Research Areas</h2>
-               <!-- Hybrid Consensus -->
+               <!-- <h2 class="section-title">Research Areas</h2>
+               Hybrid Consensus -->
                <div class="research-box">
-                  <h3>Consensus Security and Incentive Analysis</h3>
-                  <p>Formally analyzing security and incentive failures in deployed consensus 
-protocols, and proposing provably secure alternatives.</p>
+                  <h3>1. Security Analysis</h3>
+                  <p>Proving impossibility results and demonstrating insecurity for decentralized protocols with rational participants under economic incentives.</p>
                   <ul class="timeline">
+                      <li>
+                        <span class="year">2027</span>
+                        <span class="title">Blockchain P2P Protocol Analysis</span> (<i>Ongoing Work</i>)
+                     </li>
                       <li>
                         <span class="year">2026</span>
                         <span class="title">Solana Consensus Analysis</span> (<i>Ongoing Work</i>)
@@ -209,12 +501,25 @@ protocols, and proposing provably secure alternatives.</p>
                         <span class="title">Weak Consensus Algorithm</span> (<i>INFOCOM'21</i>, <i>NDSS Poster'21</i>)
                      </li>
                   </ul>
-               </div>
+                  
+                  <h3>2. Automated Analysis Tool Design</h3>
+                   <p>Designing automated and semi-automated tools for systematic security and incentive analysis under incentive-driven rational deviations.</p>
+                   
+                     <ul class="timeline">
+                      <li>
+                        <span class="year">2027</span>
+                        <span class="title">Rational Consensus Participant Simulator</span> (<i>Ongoing Work</i>)
+                     </li>
+                     
+                      <li>
+                        <span class="year">2026</span>
+                        <span class="title">Finding Incentive Flaws for Ethereum Consensus</span> (<i>NDSS'26</i>)
+                     </li>
+                  </ul>
+                   
 
-               <div class="research-box">
-                  <h3>Privacy-Preserving Cryptographic Protocols</h3>
-                  <p>Designing cryptographic protocols that achieve privacy, accountability, 
-and integrity in decentralized systems.</p>
+                  <h3>3. Incentive-Secure Cryptographic Protocol Design</h3>
+                  <p>Designing primitives and protocols that integrate TEE, MPC, and ZKP to build secure and privacy-preserving systems against rational deviations.</p>
                   <ul class="timeline">
                      <li>
                         <span class="year">2026</span>
@@ -234,7 +539,7 @@ and integrity in decentralized systems.</p>
                      </li>
                      <li>
                         <span class="year">2023</span>
-                        <span class="title">Making Decryption Accountable using TEE</span> (<i><a href="https://eprint.iacr.org/2023/1519.pdf" target="_blank">IEEE TIFS'25</a></i>)
+                        <span class="title">Making Decryption Accountable using TEE</span> (<i><a href="https://eprint.iacr.org/2023/1519.pdf" target="_blank">IEEE TIFS'25</a>, Ongoing Work</i>)
                      </li>
                      <li>
                         <span class="year">2022</span>
@@ -245,7 +550,7 @@ and integrity in decentralized systems.</p>
                <div class="industry-applications">
                   <h2 class="section-title">Industry Impact</h2>
                   <p>
-			The outcomes of our PPDSs research (i.e., prototypes and patents) have been adopted by several organizations to enhance the 
+			The outcomes of the research (i.e., prototypes and patents) have been adopted by several organizations to enhance the 
 			privacy and security of their products and services, including, but not limited to:
                   </p>
                   <div class="logo-grid">
